@@ -1,0 +1,9 @@
+---
+import FormattedDate from "../ui/FormattedDate.astro";
+
+const date = Astro.props.date;
+---
+
+<p class="text-zinc-500 pt-5">
+    Poslední update: <FormattedDate date={date} />
+  </p>

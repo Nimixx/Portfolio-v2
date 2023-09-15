@@ -1,0 +1,36 @@
+---
+import FormattedDate from "../ui/FormattedDate.astro";
+import HyperLink from "../ui/HyperLink.astro";
+import { Sprite } from "astro-icon";
+
+const { title, pubDate, github, publicGithub, deployLive, deploy } = Astro.props;
+---
+
+<article class="pb-6 w-full flex flex-col justify-center items-center gap-2">
+  <p class="text-zinc-400 text-center">
+    Publikováno: <FormattedDate date={pubDate} />
+  </p>
+  <h1 class="text-[3rem] font-semibold text-center">{title}</h1>
+  <section>
+    <ul class="flex gap-4 text-gray-400">
+      <li>
+        {
+          publicGithub && (
+            <HyperLink href={github} target="_blank">
+              <Sprite name="simple-icons:github" class="w-8 h-8 hover:text-white transition-colors duration-300" />
+            </HyperLink>
+          )
+        }
+      </li>
+      <li>
+        {
+          deployLive && (
+            <HyperLink href={deploy} target="_blank">
+              <Sprite name="ph:link-bold" class="w-8 h-8 hover:text-white transition-colors duration-300" />
+            </HyperLink>
+          )
+        }
+      </li>
+    </ul>
+  </section>
+</article>

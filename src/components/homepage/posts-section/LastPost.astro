@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import FormattedDate from "@src/components/ui/FormattedDate.astro";
+import { posts } from "@components/hooks/fetchPosts";
+import Sections from "@src/layouts/Sections.astro";
+
+const slicedPosts = posts.slice(0, 3);
+---
+
+<Sections>
+  <h2 class="text-4xl font-medium">Poslední příspěvky</h2>
+  <p class="text-xl text-gray-400">
+    Pravidelně se snažím psát články o tom co mě zajímá a co mě baví. Většinou
+    se jedná návody na různé technologie a věci kolem vývoje moderních webových
+    aplikací. Někdy píšu moje názory na nejnovější trendy a technologie.
+  </p>
+  <ul class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+    {
+      slicedPosts.map((post) => (
+        <li class="w-full h-24 border border-primary_gray/20 rounded-xl overflow-hidden hover:bg-primary_gray/10 transition-colors animate-in fade-in duration-1000">
+          <a href={`/blog/${post.slug}/`} class="flex">
+            <section class="w-1/4 h-24 relative">
+              <Image
+                format="avif"
+                quality="low"
+                width={1280}
+                height={720}
+                src={post.data.heroImage}
+                alt=""
+                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0"
+              />
+            </section>
+            <article class="flex justify-center items-center flex-col w-3/4">
+              <p class="text-center font-medium text-zinc-400">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+              <h4 class="text-center text-2xl font-medium">
+                {post.data.title}
+              </h4>
+            </article>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Sections>

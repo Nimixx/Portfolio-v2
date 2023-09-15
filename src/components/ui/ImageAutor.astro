@@ -1,0 +1,13 @@
+---
+const { href, label } = Astro.props;
+import HyperLink from "@components/ui/HyperLink.astro";
+---
+
+<HyperLink
+  target={"_blank"}
+  rel="noopener noreferrer"
+  href={href}
+  class="bg-zinc-950/50  text-white absolute bottom-0 left-0 px-4 py-1 rounded-bl-xl rounded-tr-xl"
+>
+  {label}
+</HyperLink>

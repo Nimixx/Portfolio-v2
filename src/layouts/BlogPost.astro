@@ -1,0 +1,61 @@
+---
+import "../styles/post.style.css";
+import type { CollectionEntry } from "astro:content";
+
+import AppPage from "./AppPage.astro";
+import ContentPost from "./ContentPost.astro";
+import { Image } from "astro:assets";
+import { SITE_TITLE } from "@src/consts";
+import TagIcon from "@src/components/ui/TagIcon.astro";
+import ImageAutor from "@src/components/ui/ImageAutor.astro";
+import AboutPost from "@components/post/AboutPost.astro";
+import LastUpdate from "@src/components/post/LastUpdate.astro";
+import Spacer from "@src/components/ui/Spacer.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  author,
+  imageCredit,
+  imageAuthor,
+  tags,
+} = Astro.props;
+
+---
+
+<AppPage title={`${SITE_TITLE} - ${title}`} description={description}>
+  <ContentPost>
+    <article>
+      {
+        heroImage && (
+          <div class="w-full h-96 mb-10 relative overflow-hidden animate-in fade-in duration-1000">
+            <Image
+              class="w-full h-full object-cover rounded-bl-xl rounded-br-xl"
+              format="avif"
+              quality="mid"
+              width={1920}
+              height={1080}
+              src={heroImage}
+              alt={title}
+            />
+            <ImageAutor href={imageCredit} label={imageAuthor} />
+          </div>
+        )
+      }
+      <AboutPost title={title} author={author} pubDate={pubDate} />
+      <TagIcon tags={tags} />
+      <Spacer />
+      <article class="post">
+        <slot />
+      </article>
+      {updatedDate && <LastUpdate date={updatedDate} />}
+    </article>
+  </ContentPost>
+</AppPage>
+
+<script src="../components/hooks/copyButton.ts"></script>

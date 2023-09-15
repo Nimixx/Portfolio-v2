@@ -1,0 +1,20 @@
+---
+import { Sprite } from "astro-icon";
+import tagIcons from './tagIcons.json';
+const { tags } = Astro.props;
+---
+
+<ul class="flex items-center gap-4 py-4 text-gray-500">
+  {tags &&
+    tags.map((tag: string) => {
+      const icon = tagIcons[tag as keyof typeof tagIcons];
+      if (icon) {
+        return (
+          <li>
+            <Sprite name={icon} class="w-6 h-6" />
+          </li>
+        );
+      }
+      return null;
+    })}
+</ul>

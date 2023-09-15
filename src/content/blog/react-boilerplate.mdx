@@ -1,0 +1,118 @@
+---
+isDraft: false
+title: "React boilerplate"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam"
+pubDate: "Sep 16 2023"
+updatedDate: "Sep 16 2023"
+author: "Nimixx"
+heroImage: "../../assets/react.jpg"
+imageCredit: "https://wallpaperaccess.com/react-js#google_vignette"
+imageAuthor: " WallpaperAccess"
+tags: ["react", "vite", "tailwind", "prettier"]
+---
+
+import HyperLink from "@components/ui/HyperLink.astro";
+import Spacer from "@components/ui/Spacer.astro";
+
+#### Mapa příspěvku
+
+- [Proč mít vlastní boilerplate?](#proč-mít-vlastní-boilerplate)
+- [Techstuck](#techstuck)
+- [Nástroje & Knihovny](#nástroje--knihovny)
+- [Vite + React](#vite--react)
+- [Prettier](#prettier)
+- [Tailwind plugin pro prettier](#tailwind-plugin-pro-prettier)
+
+---
+
+### Proč mít vlastní boilerplate?
+
+Vytvářet další boilerplate pro jednoduchý start nové projektu se může zdát zcela zbytečné když na internetu se ji váli tolik že stačí si vybrat.
+
+Tady ale začíná ta sranda. Většina takových repozitářů nebude zcela aktuálních a nebo v horším případě nebudou ani funkční. Budou obsahovat někdy až moc věcí, které v projektu nechcete a nakonec Vám takový boilerplate bez úprav k vlastní podobě moc dobře sloužit nebude, nehledě na to že pokud se teprve seznamujete se slovíčky jako je bundler tak zde budete trochu narážet.
+
+Z těchto a dalších důvodu považuji za lepší cestu si boilerplate postavit přímo pro vaše prijekty, s knihovnami které používáte a máte je v malíčku.
+
+#### Techstuck
+
+Než začneme je dobré si ujasnit co od našeho boilerplatu očekáváme a jaké knihovny budeme potřebovat. Dneska je to ale docela jasné. Postavíme si jednoduchý a moderní boilerplate pro reactí apku.
+
+##### Nástroje & Knihovny
+
+- Vite
+- React
+- Prettier
+- Tailwind
+- twMerge
+- Lucide icons
+
+---
+
+#### Vite + React
+
+Pro základní scafold projektu použijeme Vite bundler. Článek zaměřený přímo na Vite se připravuje. Pro dnešek nám bude stačit pát jednoduchých příkazů.
+
+```console
+npm create vite@latest my-boilerplate
+```
+
+_Vytvoříme si základní scafold projektu._
+
+```console
+cd my-boilerplate
+```
+
+_Vráíme se zpět do našeho projektu vytvořeného pomocí Vite_
+
+
+#### Prettier
+
+Předpokládam že prettier není třeba představovat, ale pro případ že ano tak v základu se jedná o nástroj, který Vám pomůže udržet váš kód úhledný a bude ho formátovat.
+
+```console
+npm install --save-dev --save-exact prettier
+```
+
+_Nainstalujeme prettier do projektu_
+
+V src našeho projektu si vytvoříme configurační soubor pro prettier a do něj vložíme následující konfiguraci.
+
+**.prettierrc.json**
+
+```json
+{
+  "trailingComma": "all",
+  "printWidth": 100,
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true
+}
+```
+
+_Konfigurace je opravdu jen základ. Pokud si chcete hrát více tak doporučuji se podívat do dokumentace <HyperLink target="_blank" href="https://prettier.io/docs/en/">Prettier</HyperLink>_
+
+##### Tailwind plugin pro prettier
+
+Ještě chvilku zůstaneme u prettier a přidáme si do něj plugin pro tailwind. Ten nám pomůže s formátováním tailwind css class tak aby byly vždy ve stejném pořadí a velmi nám pomůže z čitelností kódu. Také nám bude hlídat konflikty mezi classami.
+
+```console
+npm install -D prettier-plugin-tailwindcss
+```
+
+_Nainstalujeme si plugin pro prettier, který nám pomůže s formátováním tailwind css.
+Více o tomto pluginu najdete na samotné stránce <HyperLink target="_blank" href="https://tailwindcss.com/blog/automatic-class-sorting-with-prettier">Tailwindu</HyperLink>._
+
+```json
+{
+  "trailingComma": "all",
+  "printWidth": 100,
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+
+_V konfiguraci prettieru si přidáme plugin pro tailwind_

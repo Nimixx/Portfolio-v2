@@ -1,0 +1,31 @@
+---
+import HyperLink from "../ui/HyperLink.astro";
+import { BLOG, PROJECT, NAV_ITEMS } from "../../consts";
+
+const { pathname } = Astro.url;
+
+---
+
+<nav>
+  <ul class="flex items-center gap-4">
+    {NAV_ITEMS.map((item) => (
+     <li
+        class={
+          (pathname === item.path || (pathname === `${item.path}/*`)) ||
+          (item.path === BLOG && pathname.startsWith(`${BLOG}/`)) ||
+          (item.path === PROJECT && pathname.startsWith(`${PROJECT}/`)) // Check if the path matches /PROJECT/*
+            ? "text-indigo-400 underline underline-offset-8"
+            : "text-white"
+        }
+      >
+        <HyperLink
+          class="hover:text-indigo-400 transition-colors duration-300"
+          href={item.path}
+        >
+          {item.label}
+        </HyperLink>
+      </li>
+    ))}
+  </ul>
+</nav>
+

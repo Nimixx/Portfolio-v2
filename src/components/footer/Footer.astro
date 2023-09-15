@@ -1,0 +1,15 @@
+---
+const today = new Date();
+import { SITE_TITLE } from "@src/consts";
+import SocialList from "../ui/SocialList.astro";
+---
+
+<footer
+  class="mt-auto w-full h-36 flex justify-center items-center text-primary_gray gap-4"
+>
+  <p>
+    &copy; {today.getFullYear()}
+    {` ${SITE_TITLE} `}
+  </p>
+  <SocialList iconClass="w-4 h-4 text-primary_gray hover:text-white transition-colors duration-300" listClass="flex" />
+</footer>

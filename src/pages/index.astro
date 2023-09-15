@@ -1,0 +1,19 @@
+---
+import AppPage from "@layouts/AppPage.astro";
+import Content from "@layouts/Content.astro";
+import Hero from "@components/homepage/hero/Hero.astro";
+import LastPost from "@components/homepage/posts-section/LastPost.astro";
+import LastProject from "@src/components/homepage/project-section/LastProject.astro";
+import TechLove from "@components/homepage/tech-section/TechLove.astro";
+import Contacts from "@components/homepage/contacts/Contacts.astro";
+---
+
+<AppPage>
+  <Content>
+    <Hero />
+    <LastPost />
+    <LastProject />
+    <TechLove/>
+    <Contacts />
+  </Content>
+</AppPage>

@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import { AUTHOR_HERO, SOURCE_HERO, SITE_TITLE } from "@src/consts";
+import HeroImg from "../../../assets/hero.jpg";
+import ImageAutor from "@components/ui/ImageAutor.astro";
+---
+
+  <section
+    class="w-full h-48 sm:h-64 md:h-96 relative overflow-hidden rounded-bl-2xl rounded-br-2xl animate-in fade-in duration-1000"
+  >
+    <Image
+      class="w-full h-full object-cover"
+      format="avif"
+      quality="high"
+      width={1280}
+      height={853}
+      src={HeroImg}
+      alt="Hero ai flower"
+    />
+    <article
+      class="w-full h-full absolute top-0 left-0 flex justify-center items-center"
+    >
+      <h1
+        class="text-4xl sm:text-6xl xl:text-8xl max-w-4xl font-bold text-center bg-gray-900/50 backdrop-blur-md rounded-2xl p-5 uppercase border border-sky-400"
+      >
+        {SITE_TITLE}
+      </h1>
+    </article>
+    <ImageAutor href={SOURCE_HERO} label={AUTHOR_HERO} />
+  </section>

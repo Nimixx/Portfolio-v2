@@ -1,0 +1,26 @@
+/* For all browsers including webkit-based ones */
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #0000004d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #748ffc;
+  outline: 1px solid slategrey;
+  border-radius: 1rem;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #748ffc #0000004d;
+}
+
+html {
+  scrollbar-gutter: stable;
+}

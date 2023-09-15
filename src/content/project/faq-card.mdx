@@ -1,0 +1,54 @@
+---
+title: "FAQ - Component"
+description: "Jednoduchá aplikace pro vyhledávání uživatelů na Githubu. Využívá Github API a moderní technologie jako React Hooks, TanStak Query, Axios, Tailwind a další. Data jsou cachována a aplikace je plně responzivní."
+pubDate: "Aug 1 2023"
+updatedDate: "Aug 16 2023"
+heroImage: "../../assets/faq.jpg"
+tags: ["react", "css"]
+imageCredit: "https://www.freepik.com/free-vector/gradient-question-mark-pattern-design_27257324.htm#query=faq%20wallpaper&position=22&from_view=search&track=ais"
+imageAuthor: "Freepik"
+---
+
+### O projektu
+
+Jednoduchá aplikace pro vyhledávání uživatelů na Githubu. Využívá Github API a moderní technologie jako React Hooks, TanStak Query, Axios, Tailwind a další. Data jsou cachována a aplikace je plně responzivní. Projekt je vytvořen jako součást [kurzu](https://www.udemy.com/course/modern-react-front-to-back/) na Udemy. Cílem bylo naučit se nové technologie a vyzkoušet si je v praxi.
+
+### Použité technologie
+
+- React Hooks
+- Tailwind
+- TanStak Query
+- Axios
+- Github API
+
+#### Zajímavé části kódu
+
+```javascript
+const useProfileSearch = () => {
+  const context = useContext(UsernameContext);
+
+  if (!context) {
+    throw new Error("useProfileSearch must be used within a UsernameProvider");
+  }
+
+  const { username, setUsername } = context;
+
+  const { error, data, refetch } = useQuery(
+    ["repoData", username],
+    () =>
+      fetch(`${import.meta.env.VITE_GITHUB_API_USER}/users/${username}`).then(
+        (res) => {
+          if (res.ok) {
+            return res.json();
+          } else if (res.status === 404) {
+            return null;
+          } else {
+            throw new Error("An error has occurred");
+          }
+        }
+      ),
+    {
+      enabled: false,
+    }
+  );
+```
