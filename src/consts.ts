@@ -24,7 +24,6 @@ export const NAV_ITEMS = [
   { label: 'Blog', path: BLOG },
   { label: 'Bio', path: BIO }
 ]
-
 //Social media
 
 export const SOCIAL_LINKS = [
