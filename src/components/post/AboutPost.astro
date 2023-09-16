@@ -1,14 +1,14 @@
 ---
-import FormattedDate from "../ui/FormattedDate.astro";
-const { title, author, pubDate } = Astro.props;
+import FormattedDate from '../ui/FormattedDate.astro'
+const { title, author, pubDate } = Astro.props
 ---
 
 <article>
-    <p class="text-zinc-400 text-center">
-      Publikováno: <FormattedDate date={pubDate} />
-    </p>
-    <h1 class="text-[3rem] font-semibold text-center">{title}</h1>
-    <p class="text-center text-zinc-400">
-      Napsal: <strong class="text-indigo-400">{author}</strong>
-    </p>
+	<p class="text-center text-zinc-400">
+		Publikováno: <FormattedDate date={pubDate} />
+	</p>
+	<h1 class="text-center text-[3rem] font-semibold">{title}</h1>
+	<p class="text-center text-zinc-400">
+		Napsal: <strong class="text-indigo-400">{author}</strong>
+	</p>
 </article>

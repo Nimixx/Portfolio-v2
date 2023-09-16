@@ -1,13 +1,13 @@
 ---
-title: "Portfolio V1"
-description: "Moje první verze portfolia byla napsaná především tak aby ukazovala moje prpjekty a technologie se kterými pracuji. Snažil jsem se i o to aby byla flexibilni s ohledem na budouci přidávání projektů. Nicméně po nějakém čase jsem se rozhodnul přistupovat k celé stránce ještě jinak a tak začala vznikat celá nová verze, na kterou právě koukáte."
-pubDate: "Aug 5 2023"
-updatedDate: "Aug 16 2023"
-heroImage: "../../assets/portfolio-v1.jpg"
-tags: ["react", "typescript", "tailwind"]
-imageCredit: "https://www.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_4102879.htm#query=web%20develope%20wallpaper&position=19&from_view=search&track=ais"
-imageAuthor: "fullvector"
-github: "https://github.com/Nimixx/portfolio-v1"
+title: 'Portfolio V1'
+description: 'Moje první verze portfolia byla napsaná především tak aby ukazovala moje prpjekty a technologie se kterými pracuji. Snažil jsem se i o to aby byla flexibilni s ohledem na budouci přidávání projektů. Nicméně po nějakém čase jsem se rozhodnul přistupovat k celé stránce ještě jinak a tak začala vznikat celá nová verze, na kterou právě koukáte.'
+pubDate: 'Aug 5 2023'
+updatedDate: 'Aug 16 2023'
+heroImage: '../../assets/portfolio-v1.jpg'
+tags: ['react', 'typescript', 'tailwind']
+imageCredit: 'https://www.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_4102879.htm#query=web%20develope%20wallpaper&position=19&from_view=search&track=ais'
+imageAuthor: 'fullvector'
+github: 'https://github.com/Nimixx/portfolio-v1'
 ---
 
 ### O projektu
@@ -30,23 +30,23 @@ Vzhled byl vytvořen mnou a jeho cílem byla především jednoduchost, dostupno
 
 ```tsx
 export default function IconStuck() {
-  return (
-    <section className="flex w-full flex-row flex-wrap items-start gap-2 pt-5 2xl:justify-between">
-      {skills.map((skill, index) => (
-        <TooltipProvider key={index}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <div className="h-10 w-10">
-                <Icon icon={skill.icon} width="100%" height="100%" />
-              </div>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{skill.tooltip}</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      ))}
-    </section>
-  );
+	return (
+		<section className="flex w-full flex-row flex-wrap items-start gap-2 pt-5 2xl:justify-between">
+			{skills.map((skill, index) => (
+				<TooltipProvider key={index}>
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<div className="h-10 w-10">
+								<Icon icon={skill.icon} width="100%" height="100%" />
+							</div>
+						</TooltipTrigger>
+						<TooltipContent>
+							<p>{skill.tooltip}</p>
+						</TooltipContent>
+					</Tooltip>
+				</TooltipProvider>
+			))}
+		</section>
+	)
 }
 ```

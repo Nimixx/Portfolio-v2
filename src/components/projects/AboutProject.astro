@@ -1,36 +1,42 @@
 ---
-import FormattedDate from "../ui/FormattedDate.astro";
-import HyperLink from "../ui/HyperLink.astro";
-import { Sprite } from "astro-icon";
+import FormattedDate from '../ui/FormattedDate.astro'
+import HyperLink from '../ui/HyperLink.astro'
+import { Sprite } from 'astro-icon'
 
-const { title, pubDate, github, publicGithub, deployLive, deploy } = Astro.props;
+const { title, pubDate, github, publicGithub, deployLive, deploy } = Astro.props
 ---
 
-<article class="pb-6 w-full flex flex-col justify-center items-center gap-2">
-  <p class="text-zinc-400 text-center">
-    Publikováno: <FormattedDate date={pubDate} />
-  </p>
-  <h1 class="text-[3rem] font-semibold text-center">{title}</h1>
-  <section>
-    <ul class="flex gap-4 text-gray-400">
-      <li>
-        {
-          publicGithub && (
-            <HyperLink href={github} target="_blank">
-              <Sprite name="simple-icons:github" class="w-8 h-8 hover:text-white transition-colors duration-300" />
-            </HyperLink>
-          )
-        }
-      </li>
-      <li>
-        {
-          deployLive && (
-            <HyperLink href={deploy} target="_blank">
-              <Sprite name="ph:link-bold" class="w-8 h-8 hover:text-white transition-colors duration-300" />
-            </HyperLink>
-          )
-        }
-      </li>
-    </ul>
-  </section>
+<article class="flex w-full flex-col items-center justify-center gap-2 pb-6">
+	<p class="text-center text-zinc-400">
+		Publikováno: <FormattedDate date={pubDate} />
+	</p>
+	<h1 class="text-center text-[3rem] font-semibold">{title}</h1>
+	<section>
+		<ul class="flex gap-4 text-gray-400">
+			<li>
+				{
+					publicGithub && (
+						<HyperLink href={github} target="_blank">
+							<Sprite
+								name="simple-icons:github"
+								class="h-8 w-8 transition-colors duration-300 hover:text-white"
+							/>
+						</HyperLink>
+					)
+				}
+			</li>
+			<li>
+				{
+					deployLive && (
+						<HyperLink href={deploy} target="_blank">
+							<Sprite
+								name="ph:link-bold"
+								class="h-8 w-8 transition-colors duration-300 hover:text-white"
+							/>
+						</HyperLink>
+					)
+				}
+			</li>
+		</ul>
+	</section>
 </article>

@@ -1,28 +1,28 @@
 ---
-import { Sprite } from "astro-icon";
-import Sections from "@src/layouts/Sections.astro";
+import { Sprite } from 'astro-icon'
+import Sections from '@src/layouts/Sections.astro'
 ---
 
 <Sections>
-  <article
-    class="w-full min-h-[15rem] rounded-2xl flex justify-center items-center flex-col gap-10"
-  >
-    <h2 class="text-xl text-primary_gray text-center">Rád pracuji s nástroji a technologiemi</h2>
-    <section class="flex justify-center items-center gap-16 flex-wrap">
-      <Sprite name="simple-icons:astro" class="astro-icon"/>
-      <Sprite name="simple-icons:react" class="astro-icon"/>
-      <Sprite name="file-icons:nextjs" class="astro-icon"/>
-      <Sprite name="file-icons:tailwind" class="astro-icon"/>
-      <Sprite name="file-icons:styledcomponents" class="astro-icon"/>
-      <Sprite name="simple-icons:vercel" class="astro-icon"/>
-    </section>
-  </article>
+	<article
+		class="flex min-h-[15rem] w-full flex-col items-center justify-center gap-10 rounded-2xl"
+	>
+		<h2 class="text-center text-xl text-primary_gray">Rád pracuji s nástroji a technologiemi</h2>
+		<section class="flex flex-wrap items-center justify-center gap-16">
+			<Sprite name="simple-icons:astro" class="astro-icon" />
+			<Sprite name="simple-icons:react" class="astro-icon" />
+			<Sprite name="file-icons:nextjs" class="astro-icon" />
+			<Sprite name="file-icons:tailwind" class="astro-icon" />
+			<Sprite name="file-icons:styledcomponents" class="astro-icon" />
+			<Sprite name="simple-icons:vercel" class="astro-icon" />
+		</section>
+	</article>
 </Sections>
 
 <style>
-  .astro-icon {
-    width: 3rem;
-    height: 3rem;
-    color: #dadada;
-  } 
+	.astro-icon {
+		width: 3rem;
+		height: 3rem;
+		color: #dadada;
+	}
 </style>

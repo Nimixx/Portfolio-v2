@@ -1,14 +1,14 @@
 ---
-title: "Tiny Player"
-description: "Jednoduchá aplikace pro vyhledávání uživatelů na Githubu. Využívá Github API a moderní technologie jako React Hooks, TanStak Query, Axios, Tailwind a další. Data jsou cachována a aplikace je plně responzivní."
-pubDate: "Aug 27 2023"
-updatedDate: "Aug 27 2023"
-heroImage: "../../assets/tiny-player.jpg"
-imageCredit: "https://www.freepik.com/free-vector/abstract-equalizer-particles-wave-background_5940813.htm#query=music%20player%20wallpaper&position=14&from_view=search&track=ais"
-imageAuthor: "pikisuperstar"
-tags: ["react", "tailwind", "twMerge"]
-github: "https://github.com/Nimixx/player-component"
-deploy: "https://player-component-mu.vercel.app/"
+title: 'Tiny Player'
+description: 'Jednoduchá aplikace pro vyhledávání uživatelů na Githubu. Využívá Github API a moderní technologie jako React Hooks, TanStak Query, Axios, Tailwind a další. Data jsou cachována a aplikace je plně responzivní.'
+pubDate: 'Aug 27 2023'
+updatedDate: 'Aug 27 2023'
+heroImage: '../../assets/tiny-player.jpg'
+imageCredit: 'https://www.freepik.com/free-vector/abstract-equalizer-particles-wave-background_5940813.htm#query=music%20player%20wallpaper&position=14&from_view=search&track=ais'
+imageAuthor: 'pikisuperstar'
+tags: ['react', 'tailwind', 'twMerge']
+github: 'https://github.com/Nimixx/player-component'
+deploy: 'https://player-component-mu.vercel.app/'
 ---
 
 ### O projektu
@@ -32,83 +32,83 @@ Jedná se jednoduchý design s pomocí Tailwind CSS a celý projekt je spíše z
 
 ```tsx
 export default function Player() {
-  const { audioRef, isPlaying, togglePlay, handleStop } = useTogglePlay();
-  const { volume, handleVolume } = useVolumeControl(audioRef);
+	const { audioRef, isPlaying, togglePlay, handleStop } = useTogglePlay()
+	const { volume, handleVolume } = useVolumeControl(audioRef)
 
-  return (
-    <>
-      <section css={container(isPlaying)}>
-        <article css={wrapper}>
-          <a
-            href="https://pixabay.com/music/future-bass-lifelike-126735/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img css={cover} src={CoverSrc} alt="Artist cover" />
-          </a>
-          <section>
-            <h2 css={song(isPlaying)}>Lifelike</h2>
-            <p css={artist}>AlexiAction</p>
-            <TimeDisplay audioRef={audioRef} isPlaying={isPlaying} />
-          </section>
-        </article>
-        <PlayControle isPlaying={isPlaying} handleClick={togglePlay} />
-        <audio ref={audioRef} src={LofiSound} onEnded={handleStop}></audio>
-      </section>
-      <VolumeControle volume={volume} handleVolume={handleVolume} />
-    </>
-  );
+	return (
+		<>
+			<section css={container(isPlaying)}>
+				<article css={wrapper}>
+					<a
+						href="https://pixabay.com/music/future-bass-lifelike-126735/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img css={cover} src={CoverSrc} alt="Artist cover" />
+					</a>
+					<section>
+						<h2 css={song(isPlaying)}>Lifelike</h2>
+						<p css={artist}>AlexiAction</p>
+						<TimeDisplay audioRef={audioRef} isPlaying={isPlaying} />
+					</section>
+				</article>
+				<PlayControle isPlaying={isPlaying} handleClick={togglePlay} />
+				<audio ref={audioRef} src={LofiSound} onEnded={handleStop}></audio>
+			</section>
+			<VolumeControle volume={volume} handleVolume={handleVolume} />
+		</>
+	)
 }
 ```
 
 **useTogglePlay.ts**
 
 ```tsx
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from 'react'
 
 export function useTogglePlay() {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+	const audioRef = useRef<HTMLAudioElement | null>(null)
+	const [isPlaying, setIsPlaying] = useState(false)
 
-  const togglePlay = () => {
-    setIsPlaying((currentIsPlaying) => !currentIsPlaying);
-  };
+	const togglePlay = () => {
+		setIsPlaying((currentIsPlaying) => !currentIsPlaying)
+	}
 
-  const handleStop = () => {
-    setIsPlaying(false);
-  };
+	const handleStop = () => {
+		setIsPlaying(false)
+	}
 
-  useEffect(() => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.play();
-      } else {
-        audioRef.current.pause();
-      }
-    }
-  }, [isPlaying]);
+	useEffect(() => {
+		if (audioRef.current) {
+			if (isPlaying) {
+				audioRef.current.play()
+			} else {
+				audioRef.current.pause()
+			}
+		}
+	}, [isPlaying])
 
-  useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.code === "Space") {
-        togglePlay();
-      }
-    }
+	useEffect(() => {
+		function handleKeyDown(event: KeyboardEvent) {
+			if (event.code === 'Space') {
+				togglePlay()
+			}
+		}
 
-    window.addEventListener("keydown", handleKeyDown);
-    console.log("Event play" + " " + "%c anded", "color: lime");
+		window.addEventListener('keydown', handleKeyDown)
+		console.log('Event play' + ' ' + '%c anded', 'color: lime')
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      console.log("Event play" + " " + "%c removed", "color: red");
-    };
-  }, []);
+		return () => {
+			window.removeEventListener('keydown', handleKeyDown)
+			console.log('Event play' + ' ' + '%c removed', 'color: red')
+		}
+	}, [])
 
-  return {
-    audioRef,
-    isPlaying,
-    togglePlay,
-    handleStop,
-  };
+	return {
+		audioRef,
+		isPlaying,
+		togglePlay,
+		handleStop
+	}
 }
 ```
