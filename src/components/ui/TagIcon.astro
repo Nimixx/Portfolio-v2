@@ -1,10 +1,11 @@
 ---
+import { twMerge } from 'tailwind-merge'
 import { Sprite } from 'astro-icon'
 import tagIcons from './tagIcons.json'
-const { tags } = Astro.props
+const { tags, iconClass, class: astroClass } = Astro.props
 ---
 
-<ul class="flex items-center gap-4 py-4 text-gray-500">
+<ul class={twMerge('flex items-center gap-4 text-gray-500', astroClass)}>
 	{
 		tags &&
 			tags.map((tag: string) => {
@@ -12,7 +13,7 @@ const { tags } = Astro.props
 				if (icon) {
 					return (
 						<li>
-							<Sprite name={icon} class="h-6 w-6" />
+							<Sprite name={icon} class={twMerge('h-6 w-6', iconClass)} />
 						</li>
 					)
 				}

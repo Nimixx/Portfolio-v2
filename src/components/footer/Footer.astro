@@ -1,16 +1,13 @@
 ---
-const today = new Date()
-import { SITE_TITLE } from '@src/consts'
+//Import data
+import { COPYRIGHT } from '@src/consts'
+//Import components
 import SocialList from '../ui/SocialList.astro'
 ---
 
-<footer class="mt-auto flex h-36 w-full items-center justify-center gap-4 text-primary_gray">
-	<p>
-		&copy; {today.getFullYear()}
-		{` ${SITE_TITLE} `}
-	</p>
-	<SocialList
-		iconClass="w-4 h-4 text-primary_gray hover:text-white transition-colors duration-300"
-		listClass="flex"
-	/>
+<footer
+  class="mt-auto flex min-h-[10rem] w-full flex-col items-center justify-center gap-4 text-primary_gray"
+>
+  <p>{COPYRIGHT}</p>
+  <SocialList iconClass="w-4 h-4 text-primary_gray" listClass="flex" />
 </footer>

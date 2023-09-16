@@ -1,11 +1,13 @@
 ---
-import HyperLink from '../ui/HyperLink.astro'
-import { SITE_TITLE, HOME } from '../../consts'
+// Import Data
+import { SITE_TITLE, HOME } from '@src/consts'
+// Import Components
+import HyperLink from '@components/ui/HyperLink.astro'
 ---
 
 <HyperLink
-	href={HOME}
-	class="text-xl font-bold uppercase text-gray-400 transition-colors duration-300 hover:text-white"
+  href={HOME}
+  class="text-xl font-bold uppercase text-gray-400 transition-colors duration-300 hover:text-white"
 >
-	{SITE_TITLE}
+  {SITE_TITLE}
 </HyperLink>
