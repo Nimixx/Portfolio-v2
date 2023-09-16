@@ -22,6 +22,7 @@ import Spacer from '@components/ui/Spacer.astro'
 - [Vite + React](#vite--react)
 - [Prettier](#prettier)
 - [Tailwind plugin pro prettier](#tailwind-plugin-pro-prettier)
+- [Tailwind CSS](#tailwind-css)
 
 ---
 
@@ -76,7 +77,7 @@ _Nainstalujeme prettier do projektu_
 
 V src našeho projektu si vytvoříme configurační soubor pro prettier a do něj vložíme následující konfiguraci.
 
-**.prettierrc.json**
+**.prettierrc**
 
 ```json
 {
@@ -99,7 +100,7 @@ Ještě chvilku zůstaneme u prettier a přidáme si do něj plugin pro tailwind
 npm install -D prettier-plugin-tailwindcss
 ```
 
-_Nainstalujeme si plugin pro prettier, který nám pomůže s formátováním tailwind css.
+_Nainstalujeme si tailwind plugin pro prettier, který nám pomůže s formátováním tailwind css.
 Více o tomto pluginu najdete na samotné stránce <HyperLink target="_blank" href="https://tailwindcss.com/blog/automatic-class-sorting-with-prettier">Tailwindu</HyperLink>._
 
 ```json
@@ -115,3 +116,54 @@ Více o tomto pluginu najdete na samotné stránce <HyperLink target="_blank" hr
 ```
 
 _V konfiguraci prettieru si přidáme plugin pro tailwind_
+
+### Tailwind CSS
+
+Nyní je čas se vrhnout na instalci samotného tailwindu do našeho projektu. Tailwind je CSS framework, díky kterému můžeme psát naše styly pomocí utility class. Instalace je velmi snadná a má jen několik málo příkazů.
+
+```console
+npm install -D tailwindcss postcss autoprefixer
+```
+
+```console
+npx tailwindcss init -p
+```
+
+V našem projektu máme tedy naistalovaný Tailwind a v souborech bychom měli vidět už také konfigurační soubor pro Tailwind. Tento soubor trochu upravíme tak aby dobře fungoval s naším projektem.	
+
+**tailwind.config.js**
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+_Osobně ještě upravuju řádek kde je cestna, které soubory bude tailwind akceptovat. Pokud používám TypeScript tak vyhazuju informace o Javascriptu **js, jsx**_
+
+Jak jsem zmiňoval tak Tailwind je CSS framework a tak je ještě potřeba přidat do našeho hlavního css stylesheetu informace o tailwindu. Pokud jste postupovali dle návodu tak ve vašem projektu zatím vidíte ještě boilerplate, který přichází s použitím bundleru Vite. Nicméně ve složce **src** uvidíte také souboru **index.css**, do toho souboru tedy vložíme informace o tailwindu.
+
+**index.css**
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### twMerge
+
+Jako další věc, která je skoro bych řekl nezbytná pokud chcete používat Tailwind i na větších projektech a chcete psát i komplexnější styly je knihovna twMerge. 
+
+```console
+npm i tailwind-merge
+```
+_Knihovna je velmi užitečná a řeší problém s konflikty v dynamickém stylování. Více o knihovně najdete na <HyperLink target="_blank" href="https://github.com/dcastil/tailwind-merge">Githubu</HyperLink>._
