@@ -9,10 +9,8 @@ module.exports = {
         primary_gray: "#616264",
         secondary_black: "#1c1e22",
         secondary_white: "#deded0",
-      }
+      },
     },
   },
-  plugins: [
-		require("tailwindcss-animate"),
-	],
+  plugins: [require("tailwindcss-animate")],
 };

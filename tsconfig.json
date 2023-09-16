@@ -11,7 +11,7 @@
       "@assets/*": ["src/assets/*"],
       "@content/*": ["src/content/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
+      "@pages/*": ["src/pages/*"]
     }
   }
 }

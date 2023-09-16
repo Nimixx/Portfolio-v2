@@ -36,6 +36,6 @@ const project = defineCollection({
         message: "Hero image must be at least 600px wide",
       }),
     }),
-})
+});
 
 export const collections = { blog, project };

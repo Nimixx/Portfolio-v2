@@ -22,7 +22,7 @@ document.querySelectorAll("pre").forEach((codeBlock) => {
 
   const copyButton = document.createElement("button");
   copyButton.className = "copy-code";
-  copyButton.disabled = !isCopyingAllowed; 
+  copyButton.disabled = !isCopyingAllowed;
 
   copyButton.innerHTML = copySvgIcon;
 
@@ -39,15 +39,15 @@ document.querySelectorAll("pre").forEach((codeBlock) => {
 
 async function copyCode(block: HTMLElement, button: HTMLButtonElement) {
   if (!isCopyingAllowed) {
-    return; 
+    return;
   }
 
   const code = block.querySelector("code");
   const text = code ? code.innerText : "";
 
   try {
-    isCopyingAllowed = false; 
-    button.disabled = true; 
+    isCopyingAllowed = false;
+    button.disabled = true;
     await navigator.clipboard.writeText(text);
 
     button.innerHTML = successSvgIcon;
@@ -56,7 +56,6 @@ async function copyCode(block: HTMLElement, button: HTMLButtonElement) {
   }
 
   setTimeout(() => {
-  
     button.innerHTML = copySvgIcon;
     isCopyingAllowed = true;
     button.disabled = !isCopyingAllowed;

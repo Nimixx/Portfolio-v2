@@ -60,6 +60,7 @@ export default function Player() {
   );
 }
 ```
+
 **useTogglePlay.ts**
 
 ```tsx
@@ -75,7 +76,7 @@ export function useTogglePlay() {
 
   const handleStop = () => {
     setIsPlaying(false);
-  }
+  };
 
   useEffect(() => {
     if (audioRef.current) {
@@ -107,7 +108,7 @@ export function useTogglePlay() {
     audioRef,
     isPlaying,
     togglePlay,
-    handleStop
+    handleStop,
   };
 }
 ```
