@@ -7,7 +7,7 @@ const slicedPosts = project.slice(0, 6)
 ---
 
 <Sections>
-	<h2 class="text-4xl font-medium">Poslední projekty</h2>
+	<h2 class="text-4xl font-bold">Projekty</h2>
 	<p class="text-xl text-gray-400">
 		Pravidelně se snažím psát články o tom co mě zajímá a co mě baví. Většinou se jedná návody na
 		různé technologie a věci kolem vývoje moderních webových aplikací. Někdy píšu moje názory na
@@ -20,7 +20,7 @@ const slicedPosts = project.slice(0, 6)
 			slicedPosts.map((project) => (
 				<li class="w-full rounded-2xl border border-primary_gray/40 p-4 transition-colors duration-200 hover:bg-primary_gray/10">
 					<a href={`/project/${project.slug}/`} class="flex flex-col gap-4">
-						<section class="relative h-80 w-full overflow-hidden rounded-2xl">
+						<section class="relative h-52 w-full overflow-hidden rounded-2xl">
 							<Image
 								format="avif"
 								quality="low"

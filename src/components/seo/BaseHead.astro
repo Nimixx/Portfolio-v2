@@ -19,6 +19,11 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
