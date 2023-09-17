@@ -1,0 +1,39 @@
+---
+// Import Components
+import { project } from '@components/hooks/fetchProject'
+import FormattedDate from '@src/components/ui/FormattedDate.astro'
+// Utils
+import { Image } from 'astro:assets'
+// Constants
+const slicedPosts = project.slice(0, 6)
+---
+
+<ul
+class="grid w-full grid-cols-1 gap-6 pt-2 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-3"
+>
+{
+  slicedPosts.map((project) => (
+    <li class="w-full rounded-2xl border border-primary_gray/40 p-4 transition-colors duration-200 hover:bg-primary_gray/10">
+      <a href={`/project/${project.slug}/`} class="flex flex-col gap-4">
+        <section class="relative h-52 w-full overflow-hidden rounded-2xl">
+          <Image
+            format="avif"
+            quality="low"
+            width={1280}
+            height={720}
+            src={project.data.heroImage}
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </section>
+        <article class="flex flex-col lg:flex-row justify-center items-center gap-2 lg:justify-between">
+          <p class="text-center text-gray-400">
+            <FormattedDate date={project.data.pubDate} />
+          </p>
+          <h4 class="text-center text-2xl font-semibold ">{project.data.title}</h4>
+        </article>
+      </a>
+    </li>
+  ))
+}
+</ul>
