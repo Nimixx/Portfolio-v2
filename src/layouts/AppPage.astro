@@ -11,17 +11,19 @@ const title = Astro.props.title || `${SITE_TITLE} - Osobní web & blog`
 ---
 
 <html lang="en" class="scroll-smooth">
-	<head>
-		<BaseHead title={title} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="relative flex min-h-screen w-full flex-col bg-primary_black text-primary_white font-primary">
-		<SpriteProvider>
-			<Header />
-			<main class="flex flex-1">
-				<slot />
-			</main>
-			<Footer />
-			<BtnTop />
-		</SpriteProvider>
-	</body>
+  <head>
+    <BaseHead title={title} description={SITE_DESCRIPTION} />
+  </head>
+  <body
+    class="relative flex min-h-screen w-full flex-col bg-primary_black font-primary text-primary_white"
+  >
+    <SpriteProvider>
+      <Header />
+      <main class="flex flex-1">
+        <slot />
+      </main>
+      <Footer />
+      <BtnTop />
+    </SpriteProvider>
+  </body>
 </html>

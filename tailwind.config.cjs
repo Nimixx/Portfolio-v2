@@ -11,7 +11,7 @@ module.exports = {
         secondary_white: '#deded0'
       },
       fontFamily: {
-        primary: ['Inter']
+        primary: ['"Open Sans"']
       }
     }
   },

@@ -1,46 +1,50 @@
 ---
-import { Image } from 'astro:assets'
-import FormattedDate from '@src/components/ui/FormattedDate.astro'
-import { posts } from '@components/hooks/fetchPosts'
-import Sections from '@src/layouts/Sections.astro'
+// Import components
+import PrimaryTitle from '@components/ui/PrimaryTitle.astro'
+import PrimaryText from '@components/ui/PrimaryText.astro'
 import TagIcon from '@src/components/ui/TagIcon.astro'
-
+import { posts } from '@components/hooks/fetchPosts'
+import FormattedDate from '@src/components/ui/FormattedDate.astro'
+// Import layouts
+import Sections from '@src/layouts/Sections.astro'
+// Utils
+import { Image } from 'astro:assets'
+// Constants
+import { POST_TEXT } from '@src/consts'
 const slicedPosts = posts.slice(0, 3)
 ---
 
 <Sections>
-	<h2 class="text-4xl font-bold">Příspěvky</h2>
-	<p class="text-xl text-gray-400">
-		Pravidelně se snažím psát články o tom co mě zajímá a co mě baví. Většinou se jedná návody na
-		různé technologie a věci kolem vývoje moderních webových aplikací. Někdy píšu moje názory na
-		nejnovější trendy a technologie.
-	</p>
-	<ul class="grid w-full grid-cols-1 gap-6 pt-2 md:grid-cols-2 lg:grid-cols-3 duration-1000 animate-in fade-in">
-		{
-			slicedPosts.map((post) => (
-				<li class="h-24 w-full overflow-hidden rounded-xl border border-primary_gray/20 transition-colors duration-200 hover:bg-primary_gray/10">
-					<a href={`/blog/${post.slug}/`} class="flex">
-						<section class="relative h-24 w-1/4">
-							<Image
-								format="avif"
-								quality="low"
-								width={1280}
-								height={720}
-								src={post.data.heroImage}
-								alt=""
-								class="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover"
-							/>
-						</section>
-						<article class="flex w-3/4 flex-col items-center justify-center">
-							<p class="text-center font-medium text-zinc-400 text-sm">
-								<FormattedDate date={post.data.pubDate} />
-							</p>
-							<h4 class="text-center text-xl font-medium">{post.data.title}</h4>
-							<TagIcon tags={post.data.tags} iconClass="w-4 h-4" class="mt-2" />
-						</article>
-					</a>
-				</li>
-			))
-		}
-	</ul>
+  <PrimaryTitle title="Příspěvky" />
+  <PrimaryText content={POST_TEXT} />
+  <ul
+    class="grid w-full grid-cols-1 gap-6 pt-2 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      slicedPosts.map((post) => (
+        <li class="h-24 w-full overflow-hidden rounded-xl border border-primary_gray/20 transition-colors duration-200 hover:bg-primary_gray/10">
+          <a href={`/blog/${post.slug}/`} class="flex">
+            <section class="relative h-24 w-1/4">
+              <Image
+                format="avif"
+                quality="low"
+                width={1280}
+                height={720}
+                src={post.data.heroImage}
+                alt=""
+                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover"
+              />
+            </section>
+            <article class="flex w-3/4 flex-col items-center justify-center">
+              <p class="text-center text-sm font-medium text-zinc-400">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+              <h4 class="text-center text-xl font-medium">{post.data.title}</h4>
+              <TagIcon tags={post.data.tags} iconClass="w-4 h-4" class="mt-2" />
+            </article>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Sections>

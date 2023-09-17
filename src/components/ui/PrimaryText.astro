@@ -1,0 +1,13 @@
+---
+// Type definitions
+type Props = {
+  content: string
+  class?: string
+}
+// Libraries imports
+import { twMerge } from 'tailwind-merge'
+// Props
+const { content, class: AstroClass } = Astro.props
+---
+
+<h2 class={twMerge('text-xl text-gray-400', AstroClass)}>{content}</h2>
