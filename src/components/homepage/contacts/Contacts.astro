@@ -1,18 +1,17 @@
 ---
 // Import layouts
 import Sections from '@src/layouts/Sections.astro'
+import CopyBtn from '@src/components/ui/CopyBtn.astro';
 ---
 
 <Sections>
-	<article
-		class="flex h-96 w-full flex-col items-center justify-center gap-4 rounded-2xl bg-gradient-to-t from-primary_black/50 via-zinc-900 to-primary_black/50 p-4"
-	>
-		<h2 class="text-center text-4xl font-bold md:text-6xl">Potřebujete web?</h2>
-		<p class="text-center text-xl text-gray-400 md:text-2xl">
-			Nebojte se nás oslovit, rádi vám poradíme.
-		</p>
-		<button class="rounded-lg bg-white px-6 py-4 text-xl font-medium text-primary_black"
-			>Kontaktuj mně</button
-		>
-	</article>
+  <article
+    class="flex h-96 w-full flex-col items-center justify-center gap-4 p-4"
+  >
+    <h2 class="text-center text-4xl font-bold md:text-[3rem] uppercase text-secondary">frontend developer</h2>
+    <p class="text-center text-xl text-gray-400 md:text-2xl">
+      Napište mi a třeba se domluvíme
+    </p>
+    <CopyBtn />
+  </article>
 </Sections>

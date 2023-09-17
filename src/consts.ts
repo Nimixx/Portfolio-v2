@@ -9,7 +9,7 @@ export const AUTHOR_HERO = 'Freepik'
 
 //Image sources
 export const SOURCE_HERO =
-  'https://www.freepik.com/free-vector/gradient-top-view-laptop-technology-background_4132603.htm#query=developer%20wallpaper&position=0&from_view=search&track=ais'
+  'https://www.freepik.com/free-vector/gradient-golden-linear-background_14456030.htm#page=3&query=wallpaper&position=8&from_view=search&track=sph'
 
 //Url constants
 export const HOME = '/'
