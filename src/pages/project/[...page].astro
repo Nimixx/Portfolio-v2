@@ -4,7 +4,7 @@ import FormattedDate from '../../components/ui/FormattedDate.astro'
 import AppPage from '../../layouts/AppPage.astro'
 import Content from '../../layouts/Content.astro'
 import { SITE_TITLE } from '@src/consts'
-
+import Spacer from '@src/components/ui/Spacer.astro'
 import HyperLink from '@src/components/ui/HyperLink.astro'
 import { truncateDescription } from '@components/hooks/truncateDescription'
 import { project } from '@components/hooks/fetchProject.ts'
@@ -30,13 +30,13 @@ const { prev, next } = page.url
 ---
 
 <AppPage title={`${SITE_TITLE} - Projekty & Aplikace`}>
-	<Content>
+	<Content class='pt-10'>
 		<ul
 			class="grid w-full grid-cols-1 gap-6 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-3"
 		>
 			{
 				page.data.map((project: projectProps) => (
-					<li class="w-full rounded-2xl border border-primary_gray/40 p-4 transition-colors duration-200 hover:bg-primary_gray/10">
+					<li class="w-full rounded-2xl border border-primary_light p-4 transition-colors duration-200 hover:bg-primary_light/20">
 						<a href={`/project/${project.slug}/`} class="block">
 							<div class="h-52 w-full">
 								<Image
@@ -55,7 +55,7 @@ const { prev, next } = page.url
 								</p>
 								<h4 class="text-center text-xl">{project.data.title}</h4>
 							</article>
-							<hr class="my-5 w-full border-zinc-800" />
+							<Spacer class='my-4' />
 							<p class="text-gray-300">{truncateDescription(project.data.description, 200)}</p>
 						</a>
 					</li>
@@ -69,7 +69,7 @@ const { prev, next } = page.url
 				prev && (
 					<HyperLink
 						href={prev}
-						class="mx-2 rounded-xl border border-primary_gray/40 px-4 py-2 transition-colors duration-300 hover:bg-primary_gray/10"
+						class="mx-2 rounded-xl border border-primary_light px-4 py-2 transition-colors duration-300 hover:bg-primary_light/20"
 						data-action="next"
 					>
 						Předchozí stránka
@@ -80,7 +80,7 @@ const { prev, next } = page.url
 				next && (
 					<HyperLink
 						href={next}
-						class="mx-2 rounded-xl border border-primary_gray/40 px-4 py-2 transition-colors duration-300 hover:bg-primary_gray/10"
+						class="mx-2 rounded-xl border border-primary_light px-4 py-2 transition-colors duration-300 hover:bg-primary_light/20"
 						data-action="next"
 					>
 						Další stránka

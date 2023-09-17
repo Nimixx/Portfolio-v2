@@ -1,7 +1,13 @@
 ---
+type Props = {
+  class?: string
+}
 
+import { twMerge } from 'tailwind-merge'
+
+const { class: AstroClass } = Astro.props
 ---
 
-<section class="mx-auto w-full px-5 xl:w-2/3 xl:px-0">
-	<slot />
+<section class={twMerge('mx-auto w-full px-5 xl:w-2/3 xl:px-0', AstroClass)}>
+  <slot />
 </section>

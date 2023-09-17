@@ -1,1 +1,11 @@
-<hr class="w-full border-primary_gray/30" />
+---
+type Props = {
+  class?: string
+}
+
+import { twMerge } from 'tailwind-merge'
+
+const { class: AstroClass } = Astro.props
+---
+
+<hr class={twMerge('w-full border-primary_light', AstroClass)} />
