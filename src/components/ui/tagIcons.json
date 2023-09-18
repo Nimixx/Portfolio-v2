@@ -1,18 +1,19 @@
 {
 	"html": "mdi:language-html5",
-	"css": "mdi:language-css3",
-	"sass": "mdi:sass",
-	"astro": "simple-icons:astro",
-	"react": "simple-icons:react",
+	"css": "vscode-icons:file-type-css",
+	"sass": "vscode-icons:file-type-sass",
+	"astro": "vscode-icons:file-type-astro",
+	"react": "vscode-icons:file-type-reactjs",
 	"next": "simple-icons:next-dot-js",
 	"vue": "simple-icons:vue-dot-js",
 	"svelte": "simple-icons:svelte",
-	"typescript": "mdi:language-typescript",
+	"typescript": "vscode-icons:file-type-typescript-official",
 	"javascript": "mdi:language-javascript",
-	"vite": "simple-icons:vite",
-	"tailwind": "file-icons:tailwind",
-	"styled-components": "file-icons:styledcomponents",
+	"vite": "vscode-icons:file-type-vite",
+	"tailwind": "vscode-icons:file-type-tailwind",
+	"styled-components": "vscode-icons:file-type-styled",
 	"vercel": "simple-icons:vercel",
 	"eslint": "simple-icons:eslint",
-	"prettier": "simple-icons:prettier"
+	"prettier": "logos:prettier",
+	"mdx": "vscode-icons:file-type-mdx"
 }

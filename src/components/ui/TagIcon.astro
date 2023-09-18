@@ -6,18 +6,18 @@ const { tags, iconClass, class: astroClass } = Astro.props
 ---
 
 <ul class={twMerge('flex items-center gap-4 text-gray-500', astroClass)}>
-	{
-		tags &&
-			tags.map((tag: string) => {
-				const icon = tagIcons[tag as keyof typeof tagIcons]
-				if (icon) {
-					return (
-						<li>
-							<Sprite name={icon} class={twMerge('h-6 w-6', iconClass)} />
-						</li>
-					)
-				}
-				return null
-			})
-	}
+  {
+    tags &&
+      tags.map((tag: string) => {
+        const icon = tagIcons[tag as keyof typeof tagIcons]
+        if (icon) {
+          return (
+            <li>
+              <Sprite name={icon} class={twMerge('h-6 w-6', iconClass)} />
+            </li>
+          )
+        }
+        return null
+      })
+  }
 </ul>

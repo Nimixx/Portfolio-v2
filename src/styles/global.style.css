@@ -12,7 +12,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #748ffc;
+	background-color: #f4ddbc;
 	outline: 1px solid slategrey;
 	border-radius: 1rem;
 }
@@ -20,7 +20,7 @@ body::-webkit-scrollbar-thumb {
 /* For Firefox */
 body {
 	scrollbar-width: thin;
-	scrollbar-color: #748ffc #0000004d;
+	scrollbar-color: #f4ddbc #0000004d;
 }
 
 html {

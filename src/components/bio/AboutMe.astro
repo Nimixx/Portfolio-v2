@@ -1,0 +1,127 @@
+---
+import Sections from '@layouts/Sections.astro'
+
+const LanguagelData = [
+  { name: 'HTML' },
+  { name: 'CSS' },
+  { name: 'Sass' },
+  { name: 'JavaScript' },
+  { name: 'TypeScript' },
+  { name: 'MD & MDX' },
+  { name: 'GraphQl' }
+]
+
+const FrameworkData = [
+  { name: 'Astro' },
+  { name: 'React' },
+  { name: 'Next.js' },
+  { name: 'Gatsby' }
+]
+
+const CssFrameworkData = [
+  { name: 'Tailwind' },
+  { name: 'Boostrap' },
+  { name: 'Bulma' },
+  { name: 'UnoCSS' }
+]
+
+const LibraryData = [
+  { name: 'Material UI' },
+  { name: 'Radix Ui' },
+  { name: 'Shadcn Ui' },
+  { name: 'Chakra Ui' },
+  { name: 'Daisy Ui' },
+  { name: 'Mantine & Ui' },
+  { name: 'Framer Motion' },
+  { name: 'GSAP' },
+  { name: 'React Router' },
+  { name: 'TanStak Colection' }
+]
+
+const Design = [
+  { name: 'Figma' },
+  { name: 'Sketch' },
+  { name: 'Adobe Collection' },
+  { name: 'Affinity Collection' }
+]
+
+const Tools = [
+  { name: 'VS Code' },
+  { name: 'Git' },
+  { name: 'Github' },
+  { name: 'Netlify' },
+  { name: 'Vercel' },
+  { name: 'StoryBook'}
+]
+---
+
+<Sections class="mx-auto w-2/4">
+  <div class="block h-24 w-24 rounded-xl bg-primary_light"></div>
+  <h3>Kdo jsem</h3>
+  <p class="text-secondary_text">
+    Jmenuji se Tadeáš a ve volném čase vytvářím webové stránky a aplikace. Rozhodl jsem se konečně
+    svůj koníček, který je pro mě vším, posunout na úroveň, na které jej budu moct provozovat na
+    full time. Rád bych se dostal do kolektivu, kde budou mít lidé kolem mě stejnou vášeň a já se
+    budu moct v kódování posunout zas o kus dál.
+  </p>
+  <h3>TechStuck</h3>
+  <ul>
+    {
+      LanguagelData.map((skill) => (
+        <li>
+          <strong class="text-secondary_text">{skill.name}</strong>
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Frameworky</h3>
+  <ul>
+    {
+      FrameworkData.map((skill) => (
+        <li>
+          <strong class="text-secondary_text">{skill.name}</strong>
+        </li>
+      ))
+    }
+  </ul>
+  <h3>CSS Frameworky</h3>
+  <ul>
+    {
+      CssFrameworkData.map((skill) => (
+        <li>
+          <strong class="text-secondary_text">{skill.name}</strong>
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Knihovny</h3>
+  <ul>
+    {
+      LibraryData.map((skill) => (
+        <li>
+          <strong class="text-secondary_text">{skill.name}</strong>
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Design</h3>
+  <ul>
+    {
+      Design.map((skill) => (
+        <li>
+          <strong class="text-secondary_text">{skill.name}</strong>
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Tools</h3>
+  <ul>
+    {
+      Tools.map((skill) => (
+        <li>
+          <strong class="text-secondary_text">{skill.name}</strong>
+        </li>
+      ))
+    }
+  </ul>
+</Sections>

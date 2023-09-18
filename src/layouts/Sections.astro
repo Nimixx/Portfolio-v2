@@ -1,3 +1,15 @@
-<section class="flex flex-col justify-center gap-4 py-6 md:py-8 xl:gap-6 xl:py-10">
-	<slot />
+---
+type Props = {
+  class?: string
+}
+
+import { twMerge } from 'tailwind-merge'
+
+const { class: AstroClass } = Astro.props
+---
+
+<section
+  class={twMerge('flex flex-col justify-center gap-4 py-6 md:py-8 xl:gap-6 xl:py-10', AstroClass)}
+>
+  <slot />
 </section>

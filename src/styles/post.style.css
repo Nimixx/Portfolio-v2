@@ -41,7 +41,7 @@
 	font-size: 1.25rem;
 	line-height: 1.75rem;
 	padding-bottom: 1.25rem;
-	color: #8c8c9b;
+	color: #b1b1b1;
 }
 
 .post p strong {
@@ -138,7 +138,7 @@ pre {
 }
 
 .copy-code svg:hover {
-	color: #9775fa;
+	color: #f4ddbc;
 }
 
 @media screen and (max-width: 768px) {

@@ -6,23 +6,23 @@ import ImageAutor from '@components/ui/ImageAutor.astro'
 ---
 
 <section
-	class="relative h-48 w-full overflow-hidden rounded-bl-2xl rounded-br-2xl duration-1000 animate-in fade-in sm:h-64 md:h-96"
+  class="relative h-48 w-full overflow-hidden rounded-bl-2xl rounded-br-2xl duration-1000 animate-in fade-in sm:h-64 md:h-96"
 >
-	<Image
-		class="h-full w-full object-cover"
-		format="avif"
-		quality="high"
-		width={1280}
-		height={853}
-		src={HeroImg}
-		alt="Hero ai flower"
-	/>
-	<article class="absolute left-0 top-0 flex h-full w-full items-center justify-center">
-		<h1
-			class="max-w-4xl rounded-2xl border border-[#dfd1b4] bg-gray-900/50 p-5 text-center text-4xl font-bold uppercase backdrop-blur-md sm:text-6xl xl:text-8xl"
-		>
-			{SITE_TITLE}
-		</h1>
-	</article>
-	<ImageAutor href={SOURCE_HERO} label={AUTHOR_HERO} />
+  <Image
+    class="h-full w-full object-cover"
+    format="avif"
+    quality="high"
+    width={1280}
+    height={853}
+    src={HeroImg}
+    alt="Hero ai flower"
+  />
+  <article class="absolute left-0 top-0 flex h-full w-full items-center justify-center">
+    <h1
+      class="max-w-4xl rounded-2xl border border-secondary bg-gray-900/50 p-5 text-center text-4xl font-bold uppercase backdrop-blur-md sm:text-6xl xl:text-8xl"
+    >
+      {SITE_TITLE}
+    </h1>
+  </article>
+  <ImageAutor href={SOURCE_HERO} label={AUTHOR_HERO} />
 </section>

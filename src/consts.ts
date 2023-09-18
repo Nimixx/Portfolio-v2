@@ -54,5 +54,15 @@ export const POST_TEXT = 'Pravidelně se snažím psát články o tom co mě za
 
 export const PROJECT_TEXT = 'Většinou se jedná o projekty, které jsem vytvořil pro sebe nebo pro někoho jiného. Většinou se jedná o webové aplikace a menší komponenty. Aktuálně pracuji na vlastní komponentové knihovně.'
 
+//Skills constants
+export const LANGUAGE = [
+  "name: 'TypeScript'",
+  "name: 'JavaScript'",
+  "name: 'HTML'",
+  "name: 'CSS'",
+  "name: 'SASS'",
+  "name: 'MD & MDX'"
+]
+
 //Mix constants
 export const COPYRIGHT = `© ${ACTUAL_YEAR} ${CREATOR_AUTHOR_NAME}`

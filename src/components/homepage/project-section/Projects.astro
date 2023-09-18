@@ -2,6 +2,7 @@
 // Import Components
 import { project } from '@components/hooks/fetchProject'
 import FormattedDate from '@src/components/ui/FormattedDate.astro'
+import TagIcon from '@src/components/ui/TagIcon.astro'
 // Utils
 import { Image } from 'astro:assets'
 // Constants
@@ -13,7 +14,7 @@ const slicedPosts = project.slice(0, 6)
 >
   {
     slicedPosts.map((project) => (
-      <li class="border-primary_light hover:bg-primary_light/20 w-full rounded-2xl border p-4 transition-colors duration-200">
+      <li class="w-full rounded-2xl border border-primary_light p-4 transition-colors duration-200 hover:bg-primary_light/20">
         <a href={`/project/${project.slug}/`} class="flex flex-col gap-4">
           <section class="relative h-52 w-full overflow-hidden rounded-2xl">
             <Image
