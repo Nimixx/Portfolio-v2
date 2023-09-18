@@ -12,16 +12,20 @@ const { pathname } = Astro.url
     {
       NAV_ITEMS.map((item) => (
         <li
+          id="nav__link"
           class={
             pathname === item.path ||
             pathname === `${item.path}/*` ||
             (item.path === BLOG && pathname.startsWith(`${BLOG}/`)) ||
             (item.path === PROJECT && pathname.startsWith(`${PROJECT}/`))
-              ? 'text-indigo-400 underline underline-offset-8'
+              ? 'text-secondary underline underline-offset-8'
               : 'text-white'
           }
         >
-          <HyperLink class="transition-colors duration-300 hover:text-indigo-400" href={item.path}>
+          <HyperLink
+            class="transition-colors duration-300 hover:text-secondary"
+            href={item.path}
+          >
             {item.label}
           </HyperLink>
         </li>

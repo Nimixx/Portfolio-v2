@@ -9,7 +9,7 @@ module.exports = {
         primary_dark: '#1f232f',
         text: '#f5f5f5',
         primary_gray: '#c1c3ca',
-        secondary: '#ecc790',
+        secondary: '#f4ddbc',
       },
       fontFamily: {
         primary: ['"Open Sans"']

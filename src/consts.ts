@@ -52,7 +52,7 @@ export const SOCIAL_LINKS = [
 // Home page constants
 export const POST_TEXT = 'Pravidelně se snažím psát články o tom co mě zajímá a co mě baví. Většinou se jedná návody na různé technologie a věci kolem vývoje moderních webových aplikací. Někdy píšu moje názory nanejnovější trendy a technologie.'
 
-export const PROJECT_TEXT = 'Většinou se jedná o projekty, které jsem vytvořil pro sebe nebo pro někoho jiného. Většinou se jedná o webové aplikace, ale občas se najde i nějaká desktopová aplikace.'
+export const PROJECT_TEXT = 'Většinou se jedná o projekty, které jsem vytvořil pro sebe nebo pro někoho jiného. Většinou se jedná o webové aplikace a menší komponenty. Aktuálně pracuji na vlastní komponentové knihovně.'
 
 //Mix constants
 export const COPYRIGHT = `© ${ACTUAL_YEAR} ${CREATOR_AUTHOR_NAME}`
