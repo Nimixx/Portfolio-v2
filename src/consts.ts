@@ -56,5 +56,7 @@ export const PROJECT_TEXT = 'Většinou se jedná o projekty, které jsem vytvo�
 
 export const BIO_TEXT = 'Jmenuji se Tadeáš a ve volném čase vytvářím webové stránky a aplikace. Rozhodl jsem se konečně svůj koníček, který je pro mě vším, posunout na úroveň, na které jej budu moct provozovat na full time. Rád bych se dostal do kolektivu, kde budou mít lidé kolem mě stejnou vášeň a já se budu moct v kódování posunout zas o kus dál.'
 
+export const SKILL_TEXT = 'Většinu svého času trávím programováním a vytvářením webových stránek a aplikací. Většinou se jedná o React a Next.js aplikace. Většinu svého času trávím programováním a vytvářením webových stránek a aplikací. Většinou se jedná o React a Next.js aplikace.'
+
 //Mix constants
 export const COPYRIGHT = `© ${ACTUAL_YEAR} ${CREATOR_AUTHOR_NAME}`

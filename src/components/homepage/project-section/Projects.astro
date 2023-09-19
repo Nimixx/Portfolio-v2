@@ -9,7 +9,7 @@ const slicedPosts = project.slice(0, 6)
 ---
 
 <ul
-  class="grid w-full grid-cols-1 gap-6 pt-2 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-3"
+  class="grid w-full grid-cols-1 gap-6 pt-2 md:grid-cols-2 lg:grid-cols-3 project_list"
 >
   {
     slicedPosts.map((project) => (
@@ -37,3 +37,18 @@ const slicedPosts = project.slice(0, 6)
     ))
   }
 </ul>
+
+
+<style>
+  .project_list {
+    animation: FadeIn 1s ease-in-out;
+  }
+  @keyframes FadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>

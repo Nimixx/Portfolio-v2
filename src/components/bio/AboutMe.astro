@@ -6,7 +6,7 @@ import PrimaryTitle from '../ui/PrimaryTitle.astro'
 import PrimaryText from '../ui/PrimaryText.astro'
 import Avatar from '@assets/nimixx.png'
 import AboutSkills from './AboutSkills.astro'
-import { BIO_TEXT } from '@src/consts'
+import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
 ---
 
 <Sections class="mx-auto w-4/5">
@@ -26,6 +26,7 @@ import { BIO_TEXT } from '@src/consts'
   <PrimaryTitle class="text-2xl" title="Kdo jsem" />
   <PrimaryText class="max-w-2xl text-lg" content={BIO_TEXT} />
   <PrimaryTitle class="text-2xl" title="Můj stuck" />
+  <PrimaryText class="text-lg" content={SKILL_TEXT} />
   <SortSkills />
   <AboutSkills />
   <PrimaryTitle class="text-2xl" title="Můj stuck" />

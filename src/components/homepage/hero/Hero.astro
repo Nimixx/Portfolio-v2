@@ -6,10 +6,10 @@ import ImageAutor from '@components/ui/ImageAutor.astro'
 ---
 
 <section
-  class="relative h-48 w-full overflow-hidden rounded-bl-2xl rounded-br-2xl duration-1000 animate-in fade-in sm:h-64 md:h-96"
+  class="relative h-48 w-full overflow-hidden rounded-bl-2xl rounded-br-2xl sm:h-64 md:h-96"
 >
   <Image
-    class="h-full w-full object-cover"
+    class="h-full w-full object-cover hero_img"
     format="avif"
     quality="high"
     width={1280}
@@ -26,3 +26,17 @@ import ImageAutor from '@components/ui/ImageAutor.astro'
   </article>
   <ImageAutor href={SOURCE_HERO} label={AUTHOR_HERO} />
 </section>
+
+<style>
+  .hero_img {
+    animation: FadeIn 1s ease-in-out;
+  }
+  @keyframes FadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>

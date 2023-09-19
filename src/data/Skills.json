@@ -16,13 +16,12 @@
     "skills": [
       { "name": "Astro", "strength": "strong" },
       { "name": "React", "strength": "strong" },
+      { "name": "Preact", "strength": "strong" },
       { "name": "Gatsby", "strength": "medium" },
+      { "name": "Next", "strength": "medium" },
+      { "name": "Svelte", "strength": "low" },
       { "name": "Vue", "strength": "low" }
-    ],
-    "metaFrameworks": {
-      "subtitle": "Meta Frameworks",
-      "skills": [{ "name": "Next.js", "strength": "medium" }]
-    }
+    ]
   },
 
   {
@@ -41,12 +40,35 @@
       { "name": "Radix Ui", "strength": "strong" },
       { "name": "Shadcn Ui", "strength": "strong" },
       { "name": "Chakra Ui", "strength": "medium" },
-      { "name": "Daisy Ui", "strength": "medium" },
+      { "name": "React Spring", "strength": "medium" },
       { "name": "Mantine & Ui", "strength": "medium" },
       { "name": "Framer Motion", "strength": "strong" },
       { "name": "GSAP", "strength": "medium" },
       { "name": "React Router", "strength": "strong" },
-      { "name": "TanStak", "strength": "low" }
+      { "name": "TanStak", "strength": "low" },
+      { "name": "Zod", "strength": "low"},
+      { "name": "Redux", "strength": "medium"},
+      { "name": "Zustand", "strength": "low"}
+    ]
+  },
+  {
+    "title": "CMS",
+    "skills": [
+      { "name": "Wordpress", "strength": "strong" },
+      { "name": "Contentful", "strength": "medium" },
+      { "name": "Front Matter CMS", "strength": "medium"},
+      { "name": "Statamic", "strength": "low" },
+      { "name": "StoryBlok", "strength": "low"}
+    ]
+  },
+  {
+    "title": "Nástroje",
+    "skills": [
+      { "name": "VS Code", "strength": "strong" },
+      { "name": "Git", "strength": "strong" },
+      { "name": "Github", "strength": "strong" },
+      { "name": "Trello", "strength": "strong" },
+      { "name": "Jira", "strength": "medium" }
     ]
   },
   {
@@ -57,25 +79,6 @@
       { "name": "Photoshop", "strength": "strong" },
       { "name": "Illustrator", "strength": "strong" },
       { "name": "Affinity", "strength": "strong" }
-    ]
-  },
-  {
-    "title": "CMS",
-    "skills": [
-      { "name": "Wordpress", "strength": "strong" },
-      { "name": "Contentful", "strength": "medium" },
-      { "name": "Front Matter CMS", "strength": "medium"},
-      { "name": "Statamic", "strength": "low" }
-    ]
-  },
-  {
-    "title": "Nástroje",
-    "skills": [
-      { "name": "VS Code", "strength": "strong" },
-      { "name": "Git", "strength": "strong" },
-      { "name": "Github", "strength": "strong" },
-      { "name": "Netlify", "strength": "medium" },
-      { "name": "Vercel", "strength": "medium" }
     ]
   },
   {
