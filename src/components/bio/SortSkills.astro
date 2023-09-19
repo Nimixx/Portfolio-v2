@@ -1,0 +1,65 @@
+---
+import skillsData from '@data/Skills.json'
+const strengthOrder = {
+  strong: 1,
+  medium: 2,
+  low: 3
+}
+const sortedSkillsData = skillsData.map((category) => ({
+  ...category,
+  skills: category.skills.sort(
+    (a, b) =>
+      strengthOrder[a.strength as keyof typeof strengthOrder] -
+      strengthOrder[b.strength as keyof typeof strengthOrder]
+  )
+}))
+---
+
+<section
+  class="grid w-full grid-cols-1 gap-6 pt-2 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-4"
+>
+  {
+    sortedSkillsData.map((category) => (
+      <article class="w-full rounded-xl border border-primary_light bg-primary_light/30 p-4 shadow shadow-primary_dark">
+        <h4 class="mb-2 font-bold text-secondary">{category.title}</h4>
+        <ul>
+          {category.skills.map((skill) => (
+            <li class="flex items-center gap-2">
+              <p class="text-secondary_text">{skill.name}</p>
+              <span
+                class={`inline-block h-2 w-2 rounded-full ${
+                  skill.strength === 'strong'
+                    ? 'bg-green-400'
+                    : skill.strength === 'medium'
+                    ? 'bg-orange-400'
+                    : 'bg-gray-400'
+                }`}
+              />
+            </li>
+          ))}
+        </ul>
+        {category.metaFrameworks && category.metaFrameworks.skills.length > 0 && (
+          <section class="mt-4">
+            <h4 class="mb-2 font-bold text-secondary">{category.metaFrameworks.subtitle}</h4>
+            <ul>
+              {category.metaFrameworks.skills.map((metaSkill) => (
+                <li class="flex items-center gap-2">
+                  <p class="text-secondary_text">{metaSkill.name}</p>
+                  <span
+                    class={`inline-block h-2 w-2 rounded-full ${
+                      metaSkill.strength === 'strong'
+                        ? 'bg-green-400'
+                        : metaSkill.strength === 'medium'
+                        ? 'bg-orange-400'
+                        : 'bg-gray-400'
+                    }`}
+                  />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </article>
+    ))
+  }
+</section>

@@ -7,36 +7,36 @@ const { title, pubDate, github, publicGithub, deployLive, deploy } = Astro.props
 ---
 
 <article class="flex w-full flex-col items-center justify-center gap-2 pb-6">
-	<p class="text-center text-zinc-400">
-		Publikováno: <FormattedDate date={pubDate} />
-	</p>
-	<h1 class="text-center text-[3rem] font-semibold">{title}</h1>
-	<section>
-		<ul class="flex gap-4 text-gray-400">
-			<li>
-				{
-					publicGithub && (
-						<HyperLink href={github} target="_blank">
-							<Sprite
-								name="simple-icons:github"
-								class="h-8 w-8 transition-colors duration-300 hover:text-white"
-							/>
-						</HyperLink>
-					)
-				}
-			</li>
-			<li>
-				{
-					deployLive && (
-						<HyperLink href={deploy} target="_blank">
-							<Sprite
-								name="ph:link-bold"
-								class="h-8 w-8 transition-colors duration-300 hover:text-white"
-							/>
-						</HyperLink>
-					)
-				}
-			</li>
-		</ul>
-	</section>
+  <p class="text-center text-zinc-400">
+    Publikováno: <FormattedDate date={pubDate} />
+  </p>
+  <h1 class="text-center text-[3rem] font-semibold">{title}</h1>
+  <section>
+    <ul class="flex gap-4 text-gray-400">
+      <li>
+        {
+          publicGithub && (
+            <HyperLink href={github} target="_blank">
+              <Sprite
+                name="simple-icons:github"
+                class="h-8 w-8 transition-colors duration-300 hover:text-white"
+              />
+            </HyperLink>
+          )
+        }
+      </li>
+      <li>
+        {
+          deployLive && (
+            <HyperLink href={deploy} target="_blank">
+              <Sprite
+                name="ph:link-bold"
+                class="h-8 w-8 transition-colors duration-300 hover:text-white"
+              />
+            </HyperLink>
+          )
+        }
+      </li>
+    </ul>
+  </section>
 </article>

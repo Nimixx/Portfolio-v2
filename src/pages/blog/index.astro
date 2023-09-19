@@ -10,37 +10,37 @@ import { posts } from '@components/hooks/fetchPosts.ts'
 ---
 
 <AppPage title={`${SITE_TITLE} - Návody, Články, Tvorba webu`}>
-	<Content class='pt-10'>
-		<ul
-			class="grid w-full grid-cols-1 gap-6 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-3"
-		>
-			{
-				posts.map((post) => (
-					<li class="w-full rounded-2xl border border-primary_light p-4 duration-300 hover:bg-primary_light/20">
-						<a href={`/blog/${post.slug}/`} class="block">
-							<div class="h-52 w-full">
-								<Image
-									format="avif"
-									quality="low"
-									width={1280}
-									height={720}
-									src={post.data.heroImage}
-									alt=""
-									class="mb-2 h-full w-full rounded-2xl object-cover"
-								/>
-							</div>
-							<article class="mt-5">
-								<p class="text-center text-gray-400">
-									<FormattedDate date={post.data.pubDate} />
-								</p>
-								<h4 class="text-center text-xl">{post.data.title}</h4>
-							</article>
-							<Spacer class="my-4" />
-							<p class="text-gray-300">{truncateDescription(post.data.description, 200)}</p>
-						</a>
-					</li>
-				))
-			}
-		</ul>
-	</Content>
+  <Content class="pt-10">
+    <ul
+      class="grid w-full grid-cols-1 gap-6 duration-1000 animate-in fade-in md:grid-cols-2 lg:grid-cols-3"
+    >
+      {
+        posts.map((post) => (
+          <li class="w-full rounded-2xl border border-primary_light p-4 duration-300 hover:bg-primary_light/20">
+            <a href={`/blog/${post.slug}/`} class="block">
+              <div class="h-52 w-full">
+                <Image
+                  format="avif"
+                  quality="low"
+                  width={1280}
+                  height={720}
+                  src={post.data.heroImage}
+                  alt=""
+                  class="mb-2 h-full w-full rounded-2xl object-cover"
+                />
+              </div>
+              <article class="mt-5">
+                <p class="text-center text-gray-400">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+                <h4 class="text-center text-xl">{post.data.title}</h4>
+              </article>
+              <Spacer class="my-4" />
+              <p class="text-gray-300">{truncateDescription(post.data.description, 200)}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Content>
 </AppPage>

@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Jazyky",
+    "skills": [
+      { "name": "HTML", "strength": "strong" },
+      { "name": "CSS", "strength": "strong" },
+      { "name": "Sass", "strength": "strong" },
+      { "name": "JavaScript", "strength": "strong" },
+      { "name": "TypeScript", "strength": "medium" },
+      { "name": "MD & MDX", "strength": "strong" },
+      { "name": "GraphQl", "strength": "low" }
+    ]
+  },
+  {
+    "title": "Frameworks",
+    "skills": [
+      { "name": "Astro", "strength": "strong" },
+      { "name": "React", "strength": "strong" },
+      { "name": "Gatsby", "strength": "medium" },
+      { "name": "Vue", "strength": "low" }
+    ],
+    "metaFrameworks": {
+      "subtitle": "Meta Frameworks",
+      "skills": [{ "name": "Next.js", "strength": "medium" }]
+    }
+  },
+
+  {
+    "title": "CSS Frameworks",
+    "skills": [
+      { "name": "Tailwind", "strength": "strong" },
+      { "name": "Bootstrap", "strength": "strong" },
+      { "name": "Bulma", "strength": "medium" },
+      { "name": "UnoCSS", "strength": "medium" }
+    ]
+  },
+  {
+    "title": "Knihovny",
+    "skills": [
+      { "name": "Material UI", "strength": "strong" },
+      { "name": "Radix Ui", "strength": "strong" },
+      { "name": "Shadcn Ui", "strength": "strong" },
+      { "name": "Chakra Ui", "strength": "medium" },
+      { "name": "Daisy Ui", "strength": "medium" },
+      { "name": "Mantine & Ui", "strength": "medium" },
+      { "name": "Framer Motion", "strength": "strong" },
+      { "name": "GSAP", "strength": "medium" },
+      { "name": "React Router", "strength": "strong" },
+      { "name": "TanStak", "strength": "low" }
+    ]
+  },
+  {
+    "title": "Design",
+    "skills": [
+      { "name": "Figma", "strength": "medium" },
+      { "name": "Sketch", "strength": "low" },
+      { "name": "Photoshop", "strength": "strong" },
+      { "name": "Illustrator", "strength": "strong" },
+      { "name": "Affinity", "strength": "strong" }
+    ]
+  },
+  {
+    "title": "CMS",
+    "skills": [
+      { "name": "Wordpress", "strength": "strong" },
+      { "name": "Contentful", "strength": "medium" },
+      { "name": "Front Matter CMS", "strength": "medium"},
+      { "name": "Statamic", "strength": "low" }
+    ]
+  },
+  {
+    "title": "Nástroje",
+    "skills": [
+      { "name": "VS Code", "strength": "strong" },
+      { "name": "Git", "strength": "strong" },
+      { "name": "Github", "strength": "strong" },
+      { "name": "Netlify", "strength": "medium" },
+      { "name": "Vercel", "strength": "medium" }
+    ]
+  },
+  {
+    "title": "Ostatní",
+    "skills": [{ "name": "StoryBook", "strength": "medium" }]
+  }
+]
