@@ -8,7 +8,8 @@
       { "name": "JavaScript", "strength": "strong" },
       { "name": "TypeScript", "strength": "medium" },
       { "name": "MD & MDX", "strength": "strong" },
-      { "name": "GraphQl", "strength": "low" }
+      { "name": "PHP", "strength": "low" },
+      { "name": "Git", "strength": "strong" }
     ]
   },
   {
@@ -20,7 +21,8 @@
       { "name": "Gatsby", "strength": "medium" },
       { "name": "Next", "strength": "medium" },
       { "name": "Svelte", "strength": "low" },
-      { "name": "Vue", "strength": "low" }
+      { "name": "Vue", "strength": "low" },
+      { "name": "Nuxt", "strength": "low" }
     ]
   },
 
@@ -46,9 +48,9 @@
       { "name": "GSAP", "strength": "medium" },
       { "name": "React Router", "strength": "strong" },
       { "name": "TanStak", "strength": "low" },
-      { "name": "Zod", "strength": "low"},
-      { "name": "Redux", "strength": "medium"},
-      { "name": "Zustand", "strength": "low"}
+      { "name": "Zod", "strength": "low" },
+      { "name": "Redux", "strength": "medium" },
+      { "name": "Zustand", "strength": "low" }
     ]
   },
   {
@@ -56,33 +58,53 @@
     "skills": [
       { "name": "Wordpress", "strength": "strong" },
       { "name": "Contentful", "strength": "medium" },
-      { "name": "Front Matter CMS", "strength": "medium"},
+      { "name": "Front Matter CMS", "strength": "medium" },
       { "name": "Statamic", "strength": "low" },
-      { "name": "StoryBlok", "strength": "low"}
+      { "name": "StoryBlok", "strength": "low" }
+    ]
+  },
+  {
+    "title": "Data",
+    "skills": [
+      { "name": "JSON", "strength": "strong" },
+      { "name": "MySQL", "strength": "medium" },
+      { "name": "MongoDB", "strength": "low" },
+      { "name": "GraphQL", "strength": "medium" },
+      { "name": "Firebase", "strength": "low" },
+      { "name": "Supabase", "strength": "low" }
+    ]
+  },
+  {
+    "title": "Bundlers",
+    "skills": [
+      { "name": "Vite", "strength": "strong" },
+      { "name": "Webpack", "strength": "medium" },
+      { "name": "Parcel", "strength": "medium" },
+      { "name": "Turbo", "strength": "low" }
     ]
   },
   {
     "title": "Nástroje",
     "skills": [
       { "name": "VS Code", "strength": "strong" },
-      { "name": "Git", "strength": "strong" },
       { "name": "Github", "strength": "strong" },
-      { "name": "Trello", "strength": "strong" },
-      { "name": "Jira", "strength": "medium" }
+      { "name": "GitKraken", "strength": "medium" },
+      { "name": "Sublime Merge", "strength": "medium" },
+      { "name": "StoryBook", "strength": "medium" }
     ]
   },
   {
-    "title": "Design",
+    "title": "Grafika & Ostaní",
     "skills": [
       { "name": "Figma", "strength": "medium" },
-      { "name": "Sketch", "strength": "low" },
+      { "name": "Sketch", "strength": "medium" },
       { "name": "Photoshop", "strength": "strong" },
       { "name": "Illustrator", "strength": "strong" },
-      { "name": "Affinity", "strength": "strong" }
+      { "name": "Affinity", "strength": "strong" },
+      { "name": "Gimp", "strength": "low" },
+      { "name": "Davinic Resolve", "strength": "strong" },
+      { "name": "Blender", "strength": "low" },
+      { "name": "Inkscape", "strength": "medium" }
     ]
-  },
-  {
-    "title": "Ostatní",
-    "skills": [{ "name": "StoryBook", "strength": "medium" }]
   }
 ]

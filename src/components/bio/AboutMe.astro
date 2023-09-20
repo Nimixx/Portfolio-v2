@@ -9,9 +9,9 @@ import AboutSkills from './AboutSkills.astro'
 import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
 ---
 
-<Sections class="mx-auto w-4/5">
+<Sections class="mx-auto w-full md:w-4/5">
   <section
-    class="block h-36 w-36 overflow-hidden rounded-xl border border-primary_light bg-primary_light/30 shadow shadow-primary_dark"
+    class="block h-36 w-36 overflow-hidden rounded-xl border border-primary_light bg-primary_light/30 shadow shadow-primary_dark duration-1000 animate-in fade-in"
   >
     <Image
       format="avif"
@@ -29,5 +29,5 @@ import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
   <PrimaryText class="text-lg" content={SKILL_TEXT} />
   <SortSkills />
   <AboutSkills />
-  <PrimaryTitle class="text-2xl" title="Můj stuck" />
+  <PrimaryTitle class="text-2xl" title="Projekty" />
 </Sections>

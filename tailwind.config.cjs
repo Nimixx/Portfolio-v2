@@ -10,7 +10,7 @@ module.exports = {
         primary_text: '#f5f5f5',
         secondary_text: '#b1b1b1',
         primary_gray: '#c1c3ca',
-        secondary: '#f4ddbc',
+        secondary: '#f4ddbc'
       },
       fontFamily: {
         primary: ['"Open Sans"']

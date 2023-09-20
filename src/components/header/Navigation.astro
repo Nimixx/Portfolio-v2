@@ -3,12 +3,13 @@
 import { BLOG, PROJECT, NAV_ITEMS } from '@src/consts'
 // Import Components
 import HyperLink from '@components/ui/HyperLink.astro'
+import MobileNav from './MobileNav'
 // Utils
 const { pathname } = Astro.url
 ---
 
 <nav>
-  <ul class="flex items-center gap-4">
+  <ul class="hidden items-center gap-4 md:flex">
     {
       NAV_ITEMS.map((item) => (
         <li
@@ -22,14 +23,12 @@ const { pathname } = Astro.url
               : 'text-white'
           }
         >
-          <HyperLink
-            class="transition-colors duration-300 hover:text-secondary"
-            href={item.path}
-          >
+          <HyperLink class="transition-colors duration-300 hover:text-secondary" href={item.path}>
             {item.label}
           </HyperLink>
         </li>
       ))
     }
   </ul>
+  <MobileNav client:visible />
 </nav>
