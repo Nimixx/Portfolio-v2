@@ -13,18 +13,17 @@ tags: ['react', 'vite', 'tailwind', 'prettier']
 
 import HyperLink from '@components/ui/HyperLink.astro'
 import Spacer from '@components/ui/Spacer.astro'
+import Aside from '@components/ui/Aside.astro'
 
-#### Mapa příspěvku
-
-- [Proč mít vlastní boilerplate?](#proč-mít-vlastní-boilerplate)
-- [Techstuck](#techstuck)
-- [Nástroje & Knihovny](#nástroje--knihovny)
-- [Vite + React](#vite--react)
-- [Prettier](#prettier)
-- [Tailwind plugin pro prettier](#tailwind-plugin-pro-prettier)
-- [Tailwind CSS](#tailwind-css)
-
----
+<Aside>
+  - [Proč mít vlastní boilerplate?](#proč-mít-vlastní-boilerplate)
+  - [Techstuck](#techstuck)
+  - [Nástroje & Knihovny](#nástroje--knihovny)
+  - [Vite + React](#vite--react)
+  - [Prettier](#prettier)
+  - [Tailwind plugin pro prettier](#tailwind-plugin-pro-prettier)
+  - [Tailwind CSS](#tailwind-css)
+</Aside>
 
 ### Proč mít vlastní boilerplate?
 
@@ -81,12 +80,12 @@ V src našeho projektu si vytvoříme configurační soubor pro prettier a do n�
 
 ```json
 {
-	"trailingComma": "all",
-	"printWidth": 100,
-	"useTabs": false,
-	"tabWidth": 2,
-	"semi": false,
-	"singleQuote": true
+  "trailingComma": "all",
+  "printWidth": 100,
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true
 }
 ```
 
@@ -105,13 +104,13 @@ Více o tomto pluginu najdete na samotné stránce <HyperLink target="_blank" hr
 
 ```json
 {
-	"trailingComma": "all",
-	"printWidth": 100,
-	"useTabs": false,
-	"tabWidth": 2,
-	"semi": false,
-	"singleQuote": true,
-	"plugins": ["prettier-plugin-tailwindcss"]
+  "trailingComma": "all",
+  "printWidth": 100,
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
 
@@ -129,21 +128,18 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-V našem projektu máme tedy naistalovaný Tailwind a v souborech bychom měli vidět už také konfigurační soubor pro Tailwind. Tento soubor trochu upravíme tak aby dobře fungoval s naším projektem.	
+V našem projektu máme tedy naistalovaný Tailwind a v souborech bychom měli vidět už také konfigurační soubor pro Tailwind. Tento soubor trochu upravíme tak aby dobře fungoval s naším projektem.
 
 **tailwind.config.js**
 
 ```js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
 ```
 
@@ -161,9 +157,10 @@ Jak jsem zmiňoval tak Tailwind je CSS framework a tak je ještě potřeba přid
 
 ### twMerge
 
-Jako další věc, která je skoro bych řekl nezbytná pokud chcete používat Tailwind i na větších projektech a chcete psát i komplexnější styly je knihovna twMerge. 
+Jako další věc, která je skoro bych řekl nezbytná pokud chcete používat Tailwind i na větších projektech a chcete psát i komplexnější styly je knihovna twMerge.
 
 ```console
 npm i tailwind-merge
 ```
+
 _Knihovna je velmi užitečná a řeší problém s konflikty v dynamickém stylování. Více o knihovně najdete na <HyperLink target="_blank" href="https://github.com/dcastil/tailwind-merge">Githubu</HyperLink>._

@@ -15,46 +15,46 @@ import Spacer from '@src/components/ui/Spacer.astro'
 type Props = CollectionEntry<'blog'>['data']
 
 const {
-	title,
-	description,
-	pubDate,
-	updatedDate,
-	heroImage,
-	author,
-	imageCredit,
-	imageAuthor,
-	tags
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  author,
+  imageCredit,
+  imageAuthor,
+  tags
 } = Astro.props
 ---
 
 <AppPage title={`${SITE_TITLE} - ${title}`} description={description}>
-	<ContentPost>
-		<article>
-			{
-				heroImage && (
-					<div class="relative mb-10 h-96 w-full overflow-hidden duration-1000 animate-in fade-in">
-						<Image
-							class="h-full w-full rounded-bl-xl rounded-br-xl object-cover"
-							format="avif"
-							quality="mid"
-							width={1920}
-							height={1080}
-							src={heroImage}
-							alt={title}
-						/>
-						<ImageAutor href={imageCredit} label={imageAuthor} />
-					</div>
-				)
-			}
-			<AboutPost title={title} author={author} pubDate={pubDate} />
-			<TagIcon tags={tags} class="py-4" />
-			<Spacer />
-			<article class="post">
-				<slot />
-			</article>
-			{updatedDate && <LastUpdate date={updatedDate} />}
-		</article>
-	</ContentPost>
+  <ContentPost>
+    <article>
+      {
+        heroImage && (
+          <div class="relative mb-10 h-96 w-full overflow-hidden duration-1000 animate-in fade-in">
+            <Image
+              class="h-full w-full rounded-bl-xl rounded-br-xl object-cover"
+              format="avif"
+              quality="mid"
+              width={1920}
+              height={1080}
+              src={heroImage}
+              alt={title}
+            />
+            <ImageAutor href={imageCredit} label={imageAuthor} />
+          </div>
+        )
+      }
+      <AboutPost title={title} author={author} pubDate={pubDate} />
+      <TagIcon tags={tags} class="py-4" />
+      <Spacer />
+      <article class="post">
+        <slot />
+      </article>
+      {updatedDate && <LastUpdate date={updatedDate} />}
+    </article>
+  </ContentPost>
 </AppPage>
 
 <script src="../components/hooks/copyButton.ts"></script>
