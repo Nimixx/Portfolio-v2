@@ -62,6 +62,10 @@
   transition: color 0.3s ease;
 }
 
+.post aside a:focus{
+  color: #ffffff;
+}
+
 .post aside h3 {
 	color: #f4ddbc;
 	font-weight: 700;
@@ -71,7 +75,7 @@
   }
 
 .post aside a:hover {
-	color: #91a7ff;
+	color: #ffffff;
   }
 
 .post a {
@@ -87,6 +91,10 @@
   width: 1em; 
   padding-right: 0.3em; 
   color: #8c8c9b;
+}
+
+.post aside li:not(.no-before-style)::before {
+  color: #9775fa;
 }
 
 .post li {
@@ -121,8 +129,8 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 pre {
-  background-color: #1f232f !important;
-  border: 1px solid #383d48;
+  background-color: #32294b31 !important;
+  border: 1px solid #32294b;
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
   overflow: auto;

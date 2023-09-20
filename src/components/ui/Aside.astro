@@ -9,31 +9,3 @@
     <slot />
   </section>
 </aside>
-
-<script is:inline>
-    const asideLinks = document.querySelectorAll('#aside_links a');
-    const header = document.querySelector('header');
-  
-    // Function to smoothly hide the header
-    function smoothlyHideHeader() {
-      header.style.transition = 'transform 0.3s ease-in-out';
-      header.style.transform = 'translateY(-100%)';
-    }
-  
-    // Add event listeners to hide header on link click
-    asideLinks.forEach(a => {
-      a.addEventListener('click', () => {
-        smoothlyHideHeader();
-      });
-    });
-  
-    // Listen for scroll events to smoothly show header when scrolling up
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if (scrollY === 0) {
-        header.style.transition = 'transform 0.3s ease-in-out';
-        header.style.transform = 'translateY(0)';
-      }
-    });
-  </script>
-  

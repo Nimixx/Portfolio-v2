@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#222734',
-        primary_light: '#383d48',
-        primary_dark: '#1f232f',
-        primary_text: '#f5f5f5',
-        secondary_text: '#b1b1b1',
-        primary_gray: '#c1c3ca',
-        secondary: '#f4ddbc'
+        primary: '#100a21',
+        primary_light: '#32294b',
+        primary_dark: '#0b0716',
+        primary_text: '#e8e7eb',
+        secondary_text: '#8d889b',
+        primary_gray: '#8d889a',
+        secondary: '#e5dbff'
       },
       fontFamily: {
         primary: ['"Open Sans"']

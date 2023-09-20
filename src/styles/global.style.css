@@ -12,15 +12,14 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #f4ddbc;
-  outline: 1px solid slategrey;
+  background-color: #32294b;
   border-radius: 1rem;
 }
 
 /* For Firefox */
 body {
   scrollbar-width: thin;
-  scrollbar-color: #f4ddbc #0000004d;
+  scrollbar-color: #32294b #0000004d;
 }
 
 html {
