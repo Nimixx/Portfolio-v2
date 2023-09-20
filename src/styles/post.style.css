@@ -56,9 +56,23 @@
 }
 
 .post aside a {
-  color: #8eb5ee;
+  color: #bac8ff;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
+
+.post aside h3 {
+	color: #f4ddbc;
+	font-weight: 700;
+	font-size: 1.5rem;
+	padding: 0rem;
+	padding-bottom: 1rem;
+  }
+
+.post aside a:hover {
+	color: #91a7ff;
+  }
 
 .post a {
   color: #9775fa;
@@ -66,12 +80,13 @@
   text-underline-offset: 3.5px;
 }
 
+
 .post li::before {
   content: '›';
   display: inline-block;
-  width: 1em; /* Adjust the width as needed */
-  padding-right: 0.3em; /* Adjust the spacing as needed */
-  color: #8c8c9b; /* Color of the hyphen */
+  width: 1em; 
+  padding-right: 0.3em; 
+  color: #8c8c9b;
 }
 
 .post li {
@@ -148,4 +163,8 @@ pre {
   .copy-code {
     display: none;
   }
+}
+
+.hide {
+	  display: none;
 }

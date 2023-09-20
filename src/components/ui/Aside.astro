@@ -3,9 +3,37 @@
 ---
 
 <aside
-  class="2xl:fixed left-0 top-0 flex h-full 2xl:w-[22%] flex-col 2xl:border-r border-primary_light bg-primary_light/20 p-4 2xl:p-10 mt-10 2xl:mt-0"
+  class="left-0 top-0 mt-10 flex h-full flex-col border-primary_light bg-primary_light/20 p-4 duration-300 animate-in slide-in-from-left 2xl:fixed 2xl:mt-0 2xl:w-[23%] 2xl:border-r 2xl:p-10"
 >
-  <section class="2xl:mt-16">
+  <section id="aside_links" class="pt-4 2xl:pt-16">
     <slot />
   </section>
 </aside>
+
+<script is:inline>
+    const asideLinks = document.querySelectorAll('#aside_links a');
+    const header = document.querySelector('header');
+  
+    // Function to smoothly hide the header
+    function smoothlyHideHeader() {
+      header.style.transition = 'transform 0.3s ease-in-out';
+      header.style.transform = 'translateY(-100%)';
+    }
+  
+    // Add event listeners to hide header on link click
+    asideLinks.forEach(a => {
+      a.addEventListener('click', () => {
+        smoothlyHideHeader();
+      });
+    });
+  
+    // Listen for scroll events to smoothly show header when scrolling up
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY === 0) {
+        header.style.transition = 'transform 0.3s ease-in-out';
+        header.style.transform = 'translateY(0)';
+      }
+    });
+  </script>
+  
