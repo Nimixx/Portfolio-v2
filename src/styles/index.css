@@ -11,21 +11,31 @@
     --color-secondary-text: 141 136 155;
     --color-accent: 141 136 155;
     --color-accent2: 229 219 225;
-    --color-accent3: 229 153 247;
+    --color-accent3: 29 153 247;
     --color-success: 99 230 190;
   }
-}
-
-[data-theme='dark'] {
-  --color-primary: 16 10 33;
-  --color-primary-light: 50 41 75;
-  --color-primary-dark: 16 10 33;
-  --color-primary-text: 232 231 235;
-  --color-secondary-text: 141 136 155;
-  --color-accent: 141 136 155;
-  --color-accent2: 229 219 225;
-  --color-accent3: 229 153 247;
-  --color-success: 99 230 190;
+  :root[data-theme='dark'] {
+    --color-primary: 16 10 33;
+    --color-primary-light: 50 41 75;
+    --color-primary-dark: 16 10 33;
+    --color-primary-text: 232 231 235;
+    --color-secondary-text: 141 136 155;
+    --color-accent: 141 136 155;
+    --color-accent2: 229 219 225;
+    --color-accent3: 229 13 247;
+    --color-success: 99 230 190;
+  }
+  :root[data-theme='cool'] {
+    --color-primary: 16 10 33;
+    --color-primary-light: 50 41 75;
+    --color-primary-dark: 16 10 33;
+    --color-primary-text: 232 231 235;
+    --color-secondary-text: 141 136 155;
+    --color-accent: 141 136 155;
+    --color-accent2: 229 219 225;
+    --color-accent3: 229 153 27;
+    --color-success: 99 230 190;
+  }
 }
 
 body::-webkit-scrollbar,
@@ -56,5 +66,3 @@ html {
   overflow: hidden;
   color: rgb(157, 255, 222);
 }
-
-
