@@ -36,7 +36,7 @@ export default function SortSkills() {
         onClick={handleExpand}
         className="text-primary_black block rounded-lg border border-secondary/30 bg-primary/40 px-6 py-2 text-xl font-medium transition-colors duration-200 ease-in-out hover:bg-primary_light/40 focus:bg-primary_light/40"
       >
-        Ukázat stuck
+        {isExpand ? 'Zavřít' : 'Ukázat'} stuck
       </button>
       {isExpand && (
         <article class="flex w-full items-center justify-start pt-8">

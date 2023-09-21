@@ -5,14 +5,15 @@ import Hero from '@components/homepage/hero/Hero.astro'
 import LastPost from '@components/homepage/posts-section/LastPost.astro'
 import LastProject from '@src/components/homepage/project-section/LastProject.astro'
 import TechLove from '@components/homepage/tech-section/TechLove.astro'
-import Contacts from '@components/homepage/contacts/Contacts.astro'
+import AboutInfo from '../components/homepage/about/AboutInfo.astro'
 ---
 
 <AppPage>
-	<Content>
-		<Hero />
-		<LastProject />
-		<LastPost />
-		<TechLove />
-	</Content>
+  <Content>
+	  <Hero />
+	  <AboutInfo />
+    <LastProject />
+    <LastPost />
+    <TechLove />
+  </Content>
 </AppPage>

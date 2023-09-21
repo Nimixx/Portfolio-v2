@@ -5,7 +5,6 @@ import { Image } from 'astro:assets'
 import PrimaryTitle from '../ui/PrimaryTitle.astro'
 import PrimaryText from '../ui/PrimaryText.astro'
 import Avatar from '@assets/nimixx.png'
-import Background from '@assets/heroIII.jpg'
 import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
 ---
 
@@ -24,8 +23,8 @@ import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
     />
   </section>
   <PrimaryTitle class="text-2xl" title="Kdo jsem" />
-  <PrimaryText class="text-lg" content={BIO_TEXT} />
+  <PrimaryText class="text-lg">{BIO_TEXT}</PrimaryText>
   <PrimaryTitle class="text-2xl" title="Můj stuck" />
-  <PrimaryText class="text-lg" content={SKILL_TEXT} />
+  <PrimaryText class="text-lg">{SKILL_TEXT}</PrimaryText>
   <SortSkills client:visible />
 </Sections>
