@@ -4,13 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#100a21',
-        primary_light: '#32294b',
-        primary_dark: '#0b0716',
-        primary_text: '#e8e7eb',
-        secondary_text: '#8d889b',
-        primary_gray: '#8d889a',
-        secondary: '#e5dbff'
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        primary_light: 'rgb(var(--color-primary-light) / <alpha-value>)',
+        primary_dark: 'rgb(var(--color-primary-dark) / <alpha-value>)',
+        primary_text: 'rgb(var(--color-primary-text) / <alpha-value>)',
+        secondary_text: 'rgb(var(--color-secondary-text) / <alpha-value>)',
+        accent_1: 'rgb(var(--color-accent) / <alpha-value>)',
+        accent_2: 'rgb(var(--color-accent2) / <alpha-value>)',
+        accent_3: 'rgb(var(--color-accent3) / <alpha-value>)',
+        succes: 'rgb(var(--color-success) / <alpha-value>)',
       },
       fontFamily: {
         primary: ['"Open Sans"']

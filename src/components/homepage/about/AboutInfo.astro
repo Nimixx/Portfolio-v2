@@ -1,8 +1,24 @@
 ---
 import Sections from '@src/layouts/Sections.astro'
-import PrimaryTitle from '@src/components/ui/PrimaryTitle.astro';
+import PrimaryTitle from '@src/components/ui/PrimaryTitle.astro'
+import PrimaryText from '@src/components/ui/PrimaryText.astro'
+import Hyperlink from '@src/components/ui/Hyperlink.astro'
 ---
 
 <Sections>
-    <PrimaryTitle title='Bio' />
+  <PrimaryTitle title="Jen krátce" />
+  <PrimaryText>
+    Jsem človíček co se rád pohybuje na internetu a sleduje moderní trendy. Jsem velmi rád když
+    pokud se mám co učit a na čem pracovat, nerad jen tak sedím na židly a koukám do ničeho. Koukni
+    na moje <Hyperlink href="/project" class='class="font-semibold text-purple-400'>
+      projekty
+    </Hyperlink> nebo na <Hyperlink href="/blog" class='class="font-semibold text-purple-400'>
+      blog
+    </Hyperlink>. Pokud se chceš o mně dozvědět víc, tak se podívej do sekce <Hyperlink
+      class="font-semibold text-purple-400"
+      href="/bio"
+    >
+      moje bio
+    </Hyperlink>.
+  </PrimaryText>
 </Sections>

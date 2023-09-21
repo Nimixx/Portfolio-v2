@@ -19,7 +19,7 @@ const { pathname } = Astro.url
             pathname === `${item.path}/*` ||
             (item.path === BLOG && pathname.startsWith(`${BLOG}/`)) ||
             (item.path === PROJECT && pathname.startsWith(`${PROJECT}/`))
-              ? 'text-secondary underline underline-offset-8'
+              ? 'text-accent_3 underline underline-offset-8'
               : 'text-white'
           }
         >

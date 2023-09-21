@@ -41,33 +41,29 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   padding-bottom: 1.25rem;
-  color: #b1b1b1;
+  color:  rgb(var(--color-secondary-text));
 }
 
 .post p strong {
-  color: #9775fa;
+  color: rgb(var(--color-accent3));
 }
 
 .post em {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.75rem;
   padding-bottom: 1.25rem;
-  color: #8c8c9b;
+  color: rgb(var(--color-accent2));
 }
 
 .post aside a {
-  color: #bac8ff;
+  color: rgb(var(--color-accent2));
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.post aside a:focus{
-  color: #ffffff;
-}
-
 .post aside h3 {
-	color: #f4ddbc;
+	color: rgb(var(--color-accent2));
 	font-weight: 700;
 	font-size: 1.5rem;
 	padding: 0rem;
@@ -75,11 +71,11 @@
   }
 
 .post aside a:hover {
-	color: #ffffff;
+	color: rgb(var(--color-accent3));
   }
 
 .post a {
-  color: #9775fa;
+  color: rgb(var(--color-accent3));
   text-decoration: underline;
   text-underline-offset: 3.5px;
 }
@@ -90,18 +86,18 @@
   display: inline-block;
   width: 1em; 
   padding-right: 0.3em; 
-  color: #8c8c9b;
+  color: rgb(var(--color-secondary-text));
 }
 
 .post aside li:not(.no-before-style)::before {
-  color: #9775fa;
+  color: rgb(var(--color-accent3));
 }
 
 .post li {
   font-size: 1.15rem;
   line-height: 1.15rem;
   padding-bottom: 1.15rem;
-  color: #8c8c9b;
+  color: rgb(var(--color-accent3));
 }
 
 .post img {
@@ -111,7 +107,7 @@
 }
 
 .post blockquote {
-  border-left: 0.2rem solid #585f70;
+  border-left: 0.2rem solid rgb(var(--color-accent2));
   padding-left: 1.5rem;
   margin-left: 0;
 }
@@ -119,7 +115,7 @@
 .post hr {
   border: 0;
   height: 1px;
-  background-color: #383d48;
+  background-color: rgb(var(--color-primary-light));
   margin: 1.15rem 0;
 }
 
@@ -129,8 +125,8 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 pre {
-  background-color: #32294b31 !important;
-  border: 1px solid #32294b;
+  background-color: rgb(var(--color-primary-light) / 30%) !important;
+  border: 1px solid rgb(var(--color-primary-light));
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
   overflow: auto;
@@ -150,21 +146,21 @@ pre {
 .copy-code svg {
   width: 100%;
   height: 100%;
-  color: #929397;
+  color: rgb(var(--color-accent));
   stroke-width: 0.5px;
   transition: color 0.3s ease-in-out;
 }
 
 .copy-code:disabled svg {
-  color: #63e6be;
+  color: rgb(var(--color-success));
 }
 
 .copy-code:disabled svg:hover {
-  color: #63e6be;
+  color: rgb(var(--color-success));
 }
 
 .copy-code svg:hover {
-  color: #f4ddbc;
+  color: rgb(var(--color-accent3));
 }
 
 @media screen and (max-width: 768px) {
