@@ -25,13 +25,13 @@ const slicedPosts = project.slice(0, 6)
               alt=""
               class="h-full w-full object-cover"
             />
+            <article class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-t from-primary_dark to-primary_light/10">
+              <h4 class="text-center text-4xl font-bold ">{project.data.title}</h4>
+              <p class="text-center text-secondary">
+                <FormattedDate date={project.data.pubDate} />
+              </p>
+            </article>
           </section>
-          <article class="flex flex-col items-center justify-center gap-2 lg:flex-row lg:justify-between">
-            <p class="text-center text-gray-400">
-              <FormattedDate date={project.data.pubDate} />
-            </p>
-            <h4 class="text-center text-2xl font-semibold ">{project.data.title}</h4>
-          </article>
         </a>
       </li>
     ))

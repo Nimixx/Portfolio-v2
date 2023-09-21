@@ -1,15 +1,28 @@
 ---
 // Import layouts
 import Sections from '@src/layouts/Sections.astro'
-import CopyBtn from '@src/components/ui/CopyBtn.astro';
+import CopyBtn from '@src/components/ui/CopyBtn.astro'
+import { Image } from 'astro:assets'
+import ContactImg from '@assets/contact_gradient.jpg'
 ---
 
 <Sections>
   <article
-    class="flex h-80 w-3/4 mx-auto flex-col items-center justify-center gap-4 p-4 bg-primary_light/30 shadow shadow-primary-dark rounded-2xl"
+    class="shadow-primary-dark relative mx-auto flex h-80 w-2/4 flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl bg-primary_light/30 p-4 shadow"
   >
-    <h2 class="text-center text-4xl font-bold md:text-[3rem] uppercase text-secondary">frontend developer</h2>
-    <p class="text-center text-xl text-secondary_text md:text-2xl">
+    <Image
+      format="avif"
+      quality="high"
+      width={1280}
+      height={720}
+      src={ContactImg}
+      alt=""
+      class="absolute bottom-0 left-0 right-0 top-0 -z-10 h-full w-full object-cover"
+    />
+    <h2 class="text-center text-4xl font-bold uppercase text-secondary md:text-[3rem]">
+      frontend developer
+    </h2>
+    <p class="text-center text-xl md:text-2xl">
       Napište mi a třeba se domluvíme
     </p>
     <CopyBtn />

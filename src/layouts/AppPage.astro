@@ -6,6 +6,7 @@ import Footer from '@components/footer/Footer.astro'
 import BtnTop from '@src/components/ui/BtnTop.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import SpriteProvider from 'node_modules/astro-icon/lib/SpriteProvider.astro'
+import Contacts from '@src/components/homepage/contacts/Contacts.astro'
 
 const title = Astro.props.title || `${SITE_TITLE} - Osobní web & blog`
 
@@ -23,6 +24,7 @@ const title = Astro.props.title || `${SITE_TITLE} - Osobní web & blog`
       <main class="flex flex-1">
         <slot />
       </main>
+      <Contacts />
       <Footer />
       <BtnTop />
     </SpriteProvider>
