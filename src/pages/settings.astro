@@ -1,56 +1,14 @@
 ---
 import AppPage from '@layouts/AppPage.astro'
 import Content from '@layouts/Content.astro'
+import ThemeSetup from '@src/components/settings/ThemeSetup.astro';
 ---
 
 <AppPage>
   <Content>
-    <div>
-      <label for="light">Light</label>
-      <input type="radio" id="light" name="theme" value="light" />
-    </div>
-    <div>
-      <label for="purple">Fialová</label>
-      <input type="radio" id="purle" name="theme" value="purple" />
-    </div>
-    <div>
-      <label for="blue">Modrá</label>
-      <input type="radio" id="blue" name="theme" value="blue" />
-    </div>
+    <ThemeSetup />
   </Content>
 </AppPage>
 
-<script>
-  document.addEventListener('DOMContentLoaded', (event: Event) => {
-    const themeRadios = document.querySelectorAll<HTMLInputElement>('input[name="theme"]')
+<script src="../scripts/useSetTheme.ts"></script>
 
-    // Function to set the theme and save to local storage
-    const setTheme = (theme: string) => {
-      document.documentElement.setAttribute('data-theme', theme)
-      localStorage.setItem('selectedTheme', theme)
-
-      // Set the corresponding radio button as checked
-      const radio = document.querySelector(
-        `input[name="theme"][value="${theme}"]`
-      ) as HTMLInputElement
-      if (radio) {
-        radio.checked = true
-      }
-    }
-
-    themeRadios.forEach((radio) => {
-      radio.addEventListener('change', (event: Event) => {
-        const selectedTheme = (event.target as HTMLInputElement)?.value
-        if (selectedTheme) {
-          setTheme(selectedTheme)
-        }
-      })
-    })
-
-    // Check local storage for a saved theme and apply it
-    const savedTheme = localStorage.getItem('selectedTheme')
-    if (savedTheme) {
-      setTheme(savedTheme)
-    }
-  })
-</script>

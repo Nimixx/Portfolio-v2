@@ -1,6 +1,6 @@
 ---
 // Props
-const { iconClass, listClass } = Astro.props
+const { iconClass, listClass, settingClass } = Astro.props
 // Data
 import { SOCIAL_LINKS } from '@src/consts'
 // Utils
@@ -8,18 +8,27 @@ import { twMerge } from 'tailwind-merge'
 import { Sprite } from 'astro-icon'
 // Components imports
 import HyperLink from './HyperLink.astro'
-
 ---
 
 <ul class:list={twMerge('gap-4 text-accent_1', listClass)}>
-	{SOCIAL_LINKS.map((link) => (
-	  <li>
-		<HyperLink href={link.href} target="_blank">
-		  <Sprite
-			name={link.icon}
-			class={twMerge('w-5 h-5 hover:text-white transition-colors duration-300', iconClass)}
-		  />
-		</HyperLink>
-	  </li>
-	))}
-  </ul>
+  {
+    SOCIAL_LINKS.map((link) => (
+      <li>
+        <HyperLink href={link.href} target="_blank">
+          <Sprite
+            name={link.icon}
+            class={twMerge('h-5 w-5 transition-colors duration-300 hover:text-white', iconClass)}
+          />
+        </HyperLink>
+      </li>
+    ))
+  }
+  <li>
+    <HyperLink href="/settings">
+      <Sprite
+        name="mdi:cog-outline"
+        class={twMerge('h-5 w-5 ml-4 transition-colors duration-300 hover:text-white', settingClass)}
+      />
+    </HyperLink>
+  </li>
+</ul>

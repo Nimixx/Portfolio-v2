@@ -3,22 +3,18 @@
 import SiteName from './SiteName.astro'
 import Navigation from './Navigation.astro'
 import SocialList from '@components/ui/SocialList.astro'
-import Sprite from 'node_modules/astro-icon/lib/Sprite.astro'
-import HyperLink from '../ui/HyperLink.astro';
 ---
 
 <script src="@components/hooks/headerScroll.ts"></script>
 
 <header
-  class="bg-primary_black/50 sticky top-0 z-50 w-full border-b border-primary_light bg-primary_dark/80 px-5 shadow shadow-primary_dark backdrop-blur-lg xl:px-0"
+  class="bg-primary_black/50 sticky top-0 z-50 w-full border-b border-primary_light bg-primary_dark/80 px-5 shadow shadow-primary_dark backdrop-blur-lg xl:px-0 flex items-center"
 >
   <section class="mx-auto flex h-16 w-full items-center justify-between xl:w-2/3">
     <SiteName />
     <Navigation />
-    <section class=" items-center gap-6 hidden md:flex">
+    <section class="hidden items-center gap-6 md:flex">
       <SocialList listClass="hidden md:flex" />
-      <HyperLink href="/settings"><Sprite name="mdi:cog-outline" class="h-6 w-6 text-accent_1 hover:text-white transition-colors duration-300" /></HyperLink>
     </section>
   </section>
-
-
+</header>

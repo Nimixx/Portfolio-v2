@@ -1,0 +1,57 @@
+---
+
+---
+
+<Fragment>
+  <p class="rounded-full border border-primary_light px-4 py-1 text-center text-xs" id="themeValue">
+  </p>
+  <section>
+    <section class="flex gap-4">
+      <div>
+        <label for="purple">
+          <input type="radio" id="purple" name="theme" value="fialová" class="hidden" />
+          <span class="inline-flex h-8 w-8 rounded-full border border-purple-600 bg-purple-600/20 cursor-pointer"
+          ></span>
+        </label>
+      </div>
+      <div>
+        <label for="blue">
+          <input type="radio" id="blue" name="theme" value="modrá" class="hidden" />
+          <span class="inline-flex h-8 w-8 rounded-full border border-blue-600 bg-blue-600/20 cursor-pointer"
+          ></span>
+        </label>
+      </div>
+      <div>
+        <label for="gray">
+          <input type="radio" id="gray" name="theme" value="šedivá" class="hidden" />
+          <span class="inline-flex h-8 w-8 rounded-full border border-gray-600 bg-gray-600/20 cursor-pointer"
+          ></span>
+        </label>
+      </div>
+    </section>
+  </section>
+</Fragment>
+
+<script>
+  // Function to update the theme value in the <p> tag
+  function updateThemeValue() {
+    const selectedTheme = localStorage.getItem('selectedTheme')
+    const themeValueElement = document.getElementById('themeValue')
+
+    if (selectedTheme && themeValueElement) {
+      themeValueElement.textContent = selectedTheme
+    } else if (themeValueElement) {
+      themeValueElement.textContent = 'No theme selected'
+    }
+  }
+
+  const radioButtons = document.querySelectorAll<HTMLInputElement>('input[name="theme"]')
+  radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', () => {
+      localStorage.setItem('selectedTheme', radioButton.value)
+      updateThemeValue()
+    })
+  })
+
+  updateThemeValue()
+</script>
