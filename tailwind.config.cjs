@@ -14,6 +14,9 @@ module.exports = {
       },
       fontFamily: {
         primary: ['"Open Sans"']
+      },
+      backgroundImage:{
+        'avatar-pattern': "url('/src/assets/heroIII.jpg')"
       }
     }
   },

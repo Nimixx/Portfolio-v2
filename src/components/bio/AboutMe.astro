@@ -1,17 +1,17 @@
 ---
 import Sections from '@layouts/Sections.astro'
-import SortSkills from './SortSkills.astro'
+import SortSkills from './SortSkills'
 import { Image } from 'astro:assets'
 import PrimaryTitle from '../ui/PrimaryTitle.astro'
 import PrimaryText from '../ui/PrimaryText.astro'
 import Avatar from '@assets/nimixx.png'
-import AboutSkills from './AboutSkills.astro'
+import Background from '@assets/heroIII.jpg'
 import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
 ---
 
-<Sections class="mx-auto w-full md:w-4/5">
+<Sections class="mx-auto w-full md:w-3/4">
   <section
-    class="block h-36 w-36 overflow-hidden rounded-xl border border-primary_light bg-primary_light/30 shadow shadow-primary_dark duration-1000 animate-in fade-in"
+    class="bg-avatar-pattern block h-36 w-36 overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat shadow shadow-primary_dark duration-1000 animate-in fade-in"
   >
     <Image
       format="avif"
@@ -24,10 +24,8 @@ import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
     />
   </section>
   <PrimaryTitle class="text-2xl" title="Kdo jsem" />
-  <PrimaryText class="max-w-2xl text-lg" content={BIO_TEXT} />
+  <PrimaryText class="text-lg" content={BIO_TEXT} />
   <PrimaryTitle class="text-2xl" title="Můj stuck" />
   <PrimaryText class="text-lg" content={SKILL_TEXT} />
-  <SortSkills />
-  <AboutSkills />
-  <PrimaryTitle class="text-2xl" title="Projekty" />
+  <SortSkills client:visible />
 </Sections>
