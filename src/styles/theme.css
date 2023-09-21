@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 16 10 33;
+    --color-primary-light: 50 41 75;
+    --color-primary-dark: 16 10 33;
+    --color-primary-text: 232 231 235;
+    --color-secondary-text: 141 136 155;
+    --color-accent: 141 136 155;
+    --color-accent2: 229 219 225;
+    --color-accent3: 29 153 247;
+    --color-success: 99 230 190;
+  }
+  :root[data-theme='purple'] {
+    --color-primary: 16 10 33;
+    --color-primary-light: 50 41 75;
+    --color-primary-dark: 16 10 33;
+    --color-primary-text: 232 231 235;
+    --color-secondary-text: 141 136 155;
+    --color-accent: 145 118 153;
+    --color-accent2: 208 141 226;
+    --color-accent3: 196 119 218;
+    --color-success: 99 230 190;
+  }
+  :root[data-theme='blue'] {
+    --color-primary: 13 16 41;
+    --color-primary-light: 23 28 65;
+    --color-primary-dark: 8 11 29;
+    --color-primary-text: 232 231 235;
+    --color-secondary-text: 136 141 179;
+    --color-accent: 136 141 179;
+    --color-accent2: 119 131 228;
+    --color-accent3: 176 190 255;
+    --color-success: 99 230 190;
+  }
+}
+
+.color {
+    color: rgb(13, 16, 41);
+    color: rgb(23, 28, 65);
+    color: rgb(8, 11, 29);
+    color: rgb(17, 4, 53);
+    color: rgb(136, 141, 179);
+    color: rgb(163, 172, 238);
+    color: rgb(119, 131, 228);
+    color: rgb(176, 190, 255);
+}

@@ -56,7 +56,7 @@
 }
 
 .post aside a {
-  color: rgb(var(--color-accent2));
+  color: rgb(var(--color-accent));
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -71,7 +71,7 @@
   }
 
 .post aside a:hover {
-	color: rgb(var(--color-accent3));
+	color: #fff;
   }
 
 .post a {
