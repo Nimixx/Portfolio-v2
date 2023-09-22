@@ -1,4 +1,4 @@
-import skillsData from '../../../data/Skills.json';
+import skillsData from '../../data/Skills.json';
 
 const strengthOrder = {
   strong: 1,

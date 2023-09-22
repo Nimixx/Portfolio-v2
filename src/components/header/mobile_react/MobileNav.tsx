@@ -1,5 +1,5 @@
 import { NAV_ITEMS } from '../../../consts.ts'
-import { useOpenNav } from './useOpenNav.ts'
+import { useOpenNav } from '../../hooks/useOpenNav.ts'
 import NavButton from '../mobile_react/NavButton.tsx'
 
 export default function MobileNav() {

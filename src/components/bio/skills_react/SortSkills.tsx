@@ -1,6 +1,6 @@
 // Component
-import { sortedSkillsData } from './useSortedSkills'
-import { useExpandState } from './useExpandState'
+import { sortedSkillsData } from '../../hooks/useSortedSkills'
+import { useExpandState } from '../../hooks/useExpandState'
 import SkillLegend from './SkillLegend'
 import SkillSection from './SkillSection'
 import ExpandButton from './ExpandButton'
