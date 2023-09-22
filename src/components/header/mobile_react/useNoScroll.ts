@@ -9,7 +9,7 @@ const useNoScroll = ({ isMenuOpen, setIsMenuOpen }: ScrollProps) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
-        setIsMenuOpen(false) // Reset the state to default if the screen is larger than 768px
+        setIsMenuOpen(false)
         document.body.classList.remove('no-scroll')
       } else {
         if (isMenuOpen) {
@@ -20,17 +20,14 @@ const useNoScroll = ({ isMenuOpen, setIsMenuOpen }: ScrollProps) => {
       }
     }
 
-    // Add or remove the 'no-scroll' class based on the isMenuOpen state
     if (isMenuOpen) {
       document.body.classList.add('no-scroll')
     } else {
       document.body.classList.remove('no-scroll')
     }
 
-    // Listen for window resize events
     window.addEventListener('resize', handleResize)
 
-    // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize)
     }
