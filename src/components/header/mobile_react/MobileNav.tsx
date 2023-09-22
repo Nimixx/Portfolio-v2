@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks'
-import { NAV_ITEMS } from '../../consts'
-import useNoScroll from '../hooks/useNoScroll.ts'
-import NavButton from './NavButton.tsx'
+import { NAV_ITEMS } from '../../../consts.ts'
+import useNoScroll from '../../hooks/useNoScroll.ts'
+import NavButton from '../mobile_react/NavButton.tsx'
 
 export default function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
