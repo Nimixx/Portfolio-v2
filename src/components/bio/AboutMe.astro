@@ -1,30 +1,26 @@
 ---
+// Data
+import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
+// Assets
+import Avatar from '@assets/nimixx.png'
+// Components
 import Sections from '@layouts/Sections.astro'
-import SortSkills from './SortSkills'
-import { Image } from 'astro:assets'
+import SortSkills from './Skills-React/SortSkills'
 import PrimaryTitle from '../ui/PrimaryTitle.astro'
 import PrimaryText from '../ui/PrimaryText.astro'
-import Avatar from '@assets/nimixx.png'
-import { BIO_TEXT, SKILL_TEXT } from '@src/consts'
+// Utils
+import { Image } from 'astro:assets'
 ---
 
-<Sections class="mx-auto w-full md:w-3/4">
-  <section
-    class="fadeIn block h-36 w-36 overflow-hidden rounded-xl bg-avatar-pattern bg-cover bg-center bg-no-repeat shadow shadow-primary_dark"
-  >
-    <Image
-      format="avif"
-      quality="low"
-      width={800}
-      height={600}
-      src={Avatar}
-      alt="Creator avatar"
-      class="mb-2 h-full w-full rounded-2xl object-cover"
-    />
+<Sections class="w-full md:mx-auto md:w-3/4">
+  <section class="fadeIn h-36 w-36 rounded-md bg-avatar-pattern bg-cover bg-center bg-no-repeat">
+    <Image format="avif" quality="low" width={800} height={600} src={Avatar} alt="Creator avatar" />
   </section>
-  <PrimaryTitle class="text-2xl" title="Kdo jsem" />
-  <PrimaryText class="text-lg">{BIO_TEXT}</PrimaryText>
-  <PrimaryTitle class="text-2xl" title="Můj stuck" />
-  <PrimaryText class="text-lg">{SKILL_TEXT}</PrimaryText>
+  <article class="space-y-4">
+    <PrimaryTitle>Kdo jsem</PrimaryTitle>
+    <PrimaryText >{BIO_TEXT}</PrimaryText>
+    <PrimaryTitle>Můj stuck</PrimaryTitle>
+    <PrimaryText>{SKILL_TEXT}</PrimaryText>
+  </article>
   <SortSkills client:visible />
 </Sections>
