@@ -1,12 +1,12 @@
 ---
-//Import data
+// Data
 import { COPYRIGHT } from '@src/consts'
-//Import components
+// Components
 import SocialList from '../ui/SocialList.astro'
 ---
 
 <footer
-  class="mt-auto flex min-h-[10rem] w-full flex-col items-center justify-center gap-4 text-accent_1"
+  class="mt-auto flex py-10 w-full flex-col md:flex-row items-center justify-center gap-4 text-accent_1"
 >
   <p>{COPYRIGHT}</p>
   <SocialList iconClass="w-4 h-4" listClass="flex" settingClass="hidden" />
