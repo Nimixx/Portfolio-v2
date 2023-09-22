@@ -2,26 +2,13 @@
 // Import layouts
 import Sections from '@src/layouts/Sections.astro'
 import CopyBtn from '@src/components/ui/CopyBtn.astro'
-import { Image } from 'astro:assets'
-import ContactImg from '@assets/contact_gradient.jpg'
-import ImageAutor from '@src/components/ui/ImageAutor.astro'
 ---
 
 <Sections>
   <article
-    class="shadow-primary-dark relative mx-auto flex h-80 w-full xl:w-3/4 flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl bg-primary_light/30 p-4 shadow fadeIn"
+    class="shadow-primary-dark mx-auto flex h-80 w-full xl:w-3/4 flex-col items-center justify-center gap-4 rounded-md bg-gradient-to-tr from-primary_dark/40 to-primary_light/40 outline outline-4 outline-accent_1/20 p-4 shadow-md fadeIn shadow-primary-dark"
   >
-    <Image
-      format="avif"
-      quality="high"
-      width={1280}
-      height={720}
-      src={ContactImg}
-      alt=""
-      class="absolute bottom-0 left-0 right-0 top-0 -z-10 h-full w-full object-cover"
-    />
-    <ImageAutor href="https://unsplash.com/@magicpattern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" label="MagicPattern" />
-    <h2 class="text-center text-4xl font-bold uppercase text-secondary md:text-[3rem]">
+    <h2 class="text-center text-4xl font-bold bg-clip-text uppercase md:text-[3rem] bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-transparent">
       frontend developer
     </h2>
     <p class="text-center text-xl md:text-2xl">

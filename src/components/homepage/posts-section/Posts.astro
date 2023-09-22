@@ -13,7 +13,7 @@ import { Image } from 'astro:assets'
 >
   {
     slicedPosts.map((post) => (
-      <li class="h-24 w-full overflow-hidden rounded-xl border border-primary_light transition-colors duration-200 hover:bg-primary_light/20">
+      <li class="h-24 w-full overflow-hidden rounded-lg outline outline-2 bg-primary_light/20 hover:bg-primary_light/40 outline-primary_light transition-colors duration-200 shadow-md shadow-primary_dark">
         <a href={`/blog/${post.slug}/`} class="flex">
           <section class="relative h-24 w-24">
             <Image

@@ -9,13 +9,13 @@ const slicedPosts = project.slice(0, 6)
 ---
 
 <ul
-  class="grid w-full grid-cols-1 gap-6 pt-2 fadeIn md:grid-cols-2 lg:grid-cols-3"
+  class="fadeIn grid w-full grid-cols-1 overflow-hidden rounded-lg outline outline-8 outline-primary_light shadow-md shadow-primary_dark md:grid-cols-2 lg:grid-cols-3"
 >
   {
     slicedPosts.map((project) => (
-      <li class="w-full rounded-2xl border border-primary_light p-4 transition-colors duration-200 hover:bg-primary_light/20">
+      <li class="bg-primary_light/40transition-all h-full w-full duration-500 hover:bg-primary_light/60 ">
         <a href={`/project/${project.slug}/`} class="flex flex-col gap-4">
-          <section class="relative h-52 w-full overflow-hidden rounded-2xl">
+          <section class="relative h-52 w-full overflow-hidden group">
             <Image
               format="avif"
               quality="mid"
@@ -25,9 +25,11 @@ const slicedPosts = project.slice(0, 6)
               alt=""
               class="h-full w-full object-cover"
             />
-            <article class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-t from-primary_dark to-primary_light/10">
+            <article
+              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-2 bg-primary_dark/60 group-hover:bg-primary_dark/20 transition-all duration-500"
+            >
               <h4 class="text-center text-4xl font-bold ">{project.data.title}</h4>
-              <p class="text-center text-secondary">
+              <p class="text-secondary text-center text-accent_1">
                 <FormattedDate date={project.data.pubDate} />
               </p>
             </article>
