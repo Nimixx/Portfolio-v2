@@ -12,14 +12,14 @@ module.exports = {
         accent_1: 'rgb(var(--color-accent) / <alpha-value>)',
         accent_2: 'rgb(var(--color-accent2) / <alpha-value>)',
         accent_3: 'rgb(var(--color-accent3) / <alpha-value>)',
-        succes: 'rgb(var(--color-success) / <alpha-value>)',
+        succes: 'rgb(var(--color-success) / <alpha-value>)'
       },
       fontFamily: {
         primary: ['"Open Sans"']
       },
-      backgroundImage:{
+      backgroundImage: {
         'avatar-pattern': "url('/src/assets/heroIII.jpg')"
-      }
+      },
     }
   },
   plugins: [require('tailwindcss-animate')]

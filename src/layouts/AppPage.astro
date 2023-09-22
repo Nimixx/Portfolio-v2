@@ -1,6 +1,7 @@
 ---
 import '../styles/index.css'
 import '../styles/theme.css'
+import '../styles/animation.css'
 import BaseHead from '@src/components/seo/BaseHead.astro'
 import Header from '@components/header/Header.astro'
 import Footer from '@components/footer/Footer.astro'
@@ -29,8 +30,7 @@ const title = Astro.props.title || `${SITE_TITLE} - Osobní web & blog`
       if (selectedTheme) {
         document.documentElement.setAttribute('data-theme', selectedTheme)
       } else {
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-        const defaultTheme = prefersDarkMode ? 'dark' : 'light'
+        const defaultTheme = 'modrá'
         document.documentElement.setAttribute('data-theme', defaultTheme)
         localStorage.setItem('selectedTheme', defaultTheme)
       }

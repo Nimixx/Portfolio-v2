@@ -23,6 +23,11 @@ html {
 }
 
 .no-scroll {
-  overflow: hidden;
+  overflow: hidden !important;
   color: rgb(157, 255, 222);
+}
+
+.no_animation * {
+  animation: none !important;
+  transition: none !important;
 }

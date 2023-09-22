@@ -34,13 +34,13 @@ export default function SortSkills() {
     <section>
       <button
         onClick={handleExpand}
-        className="text-primary_black block rounded-lg border border-secondary/30 bg-primary/40 px-6 py-2 text-xl font-medium transition-colors duration-200 ease-in-out hover:bg-primary_light/40 focus:bg-primary_light/40"
+        className="text-primary_black block rounded-lg border border-primary_light bg-primary/10 px-6 py-2 text-xl font-medium transition-colors duration-200 ease-in-out hover:bg-primary_light/40 focus:bg-primary_light/40"
       >
         {isExpand ? 'Zavřít' : 'Ukázat'} stuck
       </button>
       {isExpand && (
-        <article class="flex w-full items-center justify-start pt-8">
-          <ul class="flex items-center gap-4 text-sm text-gray-500">
+        <article class="flex w-full items-center justify-start pt-8 fadeIn">
+          <ul class="flex items-center gap-4 text-sm text-accent_1">
             {SignalSkill.map((skill) => (
               <li class="flex items-center justify-center gap-2">
                 <p>{skill.label}</p> <span class={`h-2 w-2 rounded-full ${skill.color}`} />
@@ -50,7 +50,7 @@ export default function SortSkills() {
         </article>
       )}
       {isExpand && (
-        <section className="mt-6 grid w-full grid-cols-1 gap-6 pt-2 md:grid-cols-2 lg:grid-cols-4">
+        <section className="mt-6 grid w-full grid-cols-1 gap-6 pt-2 md:grid-cols-2 lg:grid-cols-4 fadeIn">
           {sortedSkillsData.map((category) => (
             <article
               key={category.title}
@@ -59,18 +59,18 @@ export default function SortSkills() {
             >
               <button
                 onClick={handleExpand}
-                className="mb-2 font-bold text-gray-300 duration-1000 animate-in fade-in"
+                className="mb-2 font-bold text-gray-300"
               >
                 {category.title}
               </button>
               <hr className="my-2 w-full border-b-0 border-primary_light" />
-              <ul className="text-secondary_text duration-1000 animate-in fade-in">
+              <ul className="text-secondary_text">
                 {category.skills.map((skill) => (
                   <li className="flex items-center gap-2" key={skill.name}>
                     <p
-                      className={`${skill.strength === 'strong' && 'font-bold text-secondary'} ${
-                        skill.strength === 'medium' && 'font-semibold'
-                      } ${skill.strength === 'low' && 'font-thin text-gray-500'}`}
+                      className={`${skill.strength === 'strong' && 'font-bold text-accent_3'} ${
+                        skill.strength === 'medium' && 'font-semibold text-accent_2'
+                      } ${skill.strength === 'low' && 'font-thin text-accent_1'}`}
                     >
                       {skill.name}
                     </p>

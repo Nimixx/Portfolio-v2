@@ -21,7 +21,7 @@
     --color-primary-text: 232 231 235;
     --color-secondary-text: 141 136 155;
     --color-accent: 145 118 153;
-    --color-accent2: 208 141 226;
+    --color-accent2: 183 102 206;
     --color-accent3: 196 119 218;
     --color-success: 99 230 190;
   }
@@ -42,9 +42,9 @@
     --color-primary-dark: 20 20 24;
     --color-primary-text: 232 231 235;
     --color-secondary-text: 135 135 153;
-    --color-accent: 82 82 95;
-    --color-accent2: 184 184 212;
-    --color-accent3: 123 123 138;
+    --color-accent: 118 118 134;
+    --color-accent2: 123 123 138 ;
+    --color-accent3:  184 184 212 ;
     --color-success: 99 230 190;
   }
 }
@@ -52,9 +52,9 @@
 .color {
     color: rgb(27, 27, 34);
     color: rgb(49, 49, 63);
-    color: rgb(20, 20, 24);
+    color: rgb(183, 102, 206);
     color: rgb(135, 135, 153);
-    color: rgb(82, 82, 95);
+    color: rgb(118, 118, 134);
     color: rgb(184, 184, 212);
     color: rgb(123, 123, 138);
 }

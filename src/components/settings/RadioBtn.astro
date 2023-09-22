@@ -1,0 +1,26 @@
+---
+import { twMerge as tw } from 'tailwind-merge'
+
+type Props = {
+  radioColor?: string
+  id: string
+  value: string
+  inputClass?: string
+  name: string
+  label?: string
+}
+
+const { radioColor, id, value, inputClass, name, label } = Astro.props
+---
+
+<Fragment>
+  <label for={id}>
+    <input type="radio" {id} name={name} value={value} class={tw('hidden', inputClass)} />
+    <span
+      class={tw(
+        'block h-8 w-8 cursor-pointer rounded-full border border-purple-600 bg-purple-600/20',
+        radioColor
+      )}>{label}</span
+    >
+  </label>
+</Fragment>

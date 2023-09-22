@@ -1,14 +1,19 @@
 ---
 import AppPage from '@layouts/AppPage.astro'
 import Content from '@layouts/Content.astro'
-import ThemeSetup from '@src/components/settings/ThemeSetup.astro';
+import ThemeSetup from '@src/components/settings/ThemeSetup.astro'
+import Spacer from '@src/components/ui/Spacer.astro'
 ---
 
 <AppPage>
-  <Content>
-    <ThemeSetup />
+  <Content class="pt-10 xl:w-2/5">
+    <section class="space-y-4">
+      <article class="space-y-4">
+        <h1 class="text-3xl font-bold">Nastavení</h1>
+        <Spacer />
+      </article>
+      <ThemeSetup />
+      <Spacer />
+    </section>
   </Content>
 </AppPage>
-
-<script src="../scripts/useSetTheme.ts"></script>
-
