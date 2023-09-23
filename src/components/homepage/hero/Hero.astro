@@ -1,24 +1,22 @@
 ---
 import { Image } from 'astro:assets'
 import { AUTHOR_HERO, SOURCE_HERO, SITE_TITLE } from '@src/consts'
-import HeroImg from '../../../assets/heroIII.jpg'
+import HeroImg from '../../../assets/heroII.jpg'
 import ImageAutor from '@components/ui/ImageAutor.astro'
 ---
 
-<section
-  class="hero relative h-48 w-full overflow-hidden rounded-bl-2xl rounded-br-md opacity-0 sm:h-64 md:h-96"
->
+<section class="relative h-48 w-full overflow-hidden rounded-bl-2xl rounded-br-md sm:h-64 md:h-96">
   <Image
-    class="hero_img h-full w-full object-cover"
+    class="hero_img h-full w-full -translate-y-full object-cover"
     format="avif"
     quality="high"
-    width={1280}
-    height={853}
+    width={1920}
+    height={1080}
     src={HeroImg}
     alt="Hero homepage image"
   />
   <article
-    class="hero_article absolute left-0 top-0 flex h-full w-full items-center justify-center opacity-0"
+    class="hero_title absolute left-0 top-0 flex h-full w-full items-center justify-center opacity-0"
   >
     <h1
       class="max-w-4xl rounded-lg bg-primary_light/40 p-5 text-center text-4xl font-bold uppercase shadow-inner shadow-primary_dark/40 sm:text-6xl xl:text-8xl"
@@ -26,7 +24,9 @@ import ImageAutor from '@components/ui/ImageAutor.astro'
       {SITE_TITLE}
     </h1>
   </article>
-  <ImageAutor href={SOURCE_HERO} label={AUTHOR_HERO} />
+  <span class="hero_author opacity-0">
+    <ImageAutor href={SOURCE_HERO} label={AUTHOR_HERO} />
+  </span>
 </section>
 
-<script src="./animateHero.ts"></script>
+<script src="../../../animation/animateHero.ts"></script>

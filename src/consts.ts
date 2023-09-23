@@ -5,10 +5,10 @@ export const CREATOR_AUTHOR_NAME = 'Tadeáš Thelen'
 export const ACTUAL_YEAR = new Date().getFullYear()
 
 //Image authors
-export const AUTHOR_HERO = 'Alejandro Ortiz'
+export const AUTHOR_HERO = 'vackground.com'
 
 //Image sources
-export const SOURCE_HERO = 'https://unsplash.com/@alejandroortiz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
+export const SOURCE_HERO = 'https://unsplash.com/@vackground?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
 
 //Url constants
 export const HOME = '/'

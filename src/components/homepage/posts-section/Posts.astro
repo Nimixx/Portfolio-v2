@@ -13,7 +13,7 @@ import { Image } from 'astro:assets'
 >
   {
     slicedPosts.map((post) => (
-      <li class="h-24 w-full overflow-hidden rounded-lg outline outline-2 bg-primary_light/20 hover:bg-primary_light/40 outline-primary_light transition-colors duration-200 shadow-md shadow-primary_dark">
+      <li class="h-24 w-full overflow-hidden rounded-lg outline outline-2 bg-primary_light/20 hover:bg-primary_light/40 outline-primary_light transition-colors duration-200 shadow-md shadow-primary_dark last_post translate-y-16 opacity-0">
         <a href={`/blog/${post.slug}/`} class="flex">
           <section class="relative h-24 w-24">
             <Image
@@ -27,13 +27,15 @@ import { Image } from 'astro:assets'
             />
           </section>
           <article class="flex w-3/4 flex-col items-center justify-center">
-            <p class="text-center text-sm font-medium text-zinc-400">
+            <p class="text-center text-sm font-medium text-zinc-400 post_date opacity-0">
               <FormattedDate date={post.data.pubDate} />
             </p>
-            <h4 class="text-center text-xl font-medium">{post.data.title}</h4>
+            <h4 class="text-center text-xl font-medium post_title opacity-0">{post.data.title}</h4>
           </article>
         </a>
       </li>
     ))
   }
 </ul>
+
+<script src="../../../animation/animatePost.ts"></script>
