@@ -32,9 +32,9 @@ const {
     <article>
       {
         heroImage && (
-          <div class="relative mb-10 h-96 w-full overflow-hidden slideInDown">
+          <div class="relative mb-10 h-96 w-full overflow-hidden">
             <Image
-              class="h-full w-full rounded-bl-xl rounded-br-xl object-cover"
+              class="post_image h-0 w-full rounded-bl-xl rounded-br-xl object-cover"
               format="avif"
               quality="mid"
               width={1920}
@@ -42,7 +42,9 @@ const {
               src={heroImage}
               alt={title}
             />
-            <ImageAutor href={imageCredit} label={imageAuthor} />
+            <span class="author opacity-0">
+              <ImageAutor href={imageCredit} label={imageAuthor} />
+            </span>
           </div>
         )
       }
@@ -53,9 +55,10 @@ const {
         <slot />
       </article>
       {updatedDate && <LastUpdate date={updatedDate} />}
-      <Spacer class='my-10' />
+      <Spacer class="my-10" />
     </article>
   </ContentPost>
 </AppPage>
 
+<script src="./animatePost.ts"></script>
 <script src="../components/hooks/copyButton.ts"></script>

@@ -223,3 +223,35 @@ Animation SlideOutDown
     transform: translateY(100%);
   }
 }
+
+/* 
+Animate slide
+*/
+
+.slider {
+  -webkit-animation: slide 360s linear infinite; /* Safari and older versions of Chrome */
+  animation: slide 50s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  /* Safari and older versions of Chrome */
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -56,6 +56,8 @@
 }
 
 .post aside a {
+  transform: translateX(-0.5rem);
+  opacity: 0;
   color: rgb(var(--color-accent));
   text-decoration: none;
   font-weight: 600;

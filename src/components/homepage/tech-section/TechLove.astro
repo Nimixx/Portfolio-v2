@@ -1,27 +1,24 @@
 ---
 import { Sprite } from 'astro-icon'
 import Sections from '@src/layouts/Sections.astro'
+import skillIconData from '@data/icons.json'
 ---
 
 <Sections>
-	<article
-		class="flex min-h-[15rem] w-full flex-col items-center justify-center gap-10 rounded-2xl"
-	>
-		<h2 class="text-center text-xl text-primary_gray">Rád pracuji s nástroji a technologiemi</h2>
-		<section class="flex flex-wrap items-center justify-center gap-16">
-			<Sprite name="vscode-icons:file-type-astro" class="astro-icon" />
-			<Sprite name="vscode-icons:file-type-reactjs" class="astro-icon" />
-			<Sprite name="file-icons:nextjs" class="astro-icon" />
-			<Sprite name="vscode-icons:file-type-tailwind" class="astro-icon" />
-			<Sprite name="vscode-icons:file-type-styled" class="astro-icon" />
-			<Sprite name="vscode-icons:file-type-sass" class="astro-icon" />
-		</section>
-	</article>
+  <article class="mx-auto flex h-[15rem] w-full flex-col items-center justify-center xl:w-2/4 overflow-hidden">
+    <h2 class="text-center text-2xl font-bold uppercase text-accent_1">
+      Nauč se každý den něco nového
+    </h2>
+    <div class="wrapper h-40">
+      <div class="boxes relative left-[50px]">
+        <div class="icon-container flex">
+          {skillIconData.map((iconName) => <Sprite name={iconName} class="w-12 text-4xl box" />)}
+        </div>
+      </div>
+    </div>
+  </article>
 </Sections>
 
-<style>
-	.astro-icon {
-		width: 3rem;
-		height: 3rem;
-	}
-</style>
+
+
+<script src="./animateSkill.ts"></script>

@@ -45,7 +45,7 @@
       { "name": "React Spring", "strength": "medium" },
       { "name": "Mantine & Ui", "strength": "medium" },
       { "name": "Framer Motion", "strength": "strong" },
-      { "name": "GSAP", "strength": "medium" },
+      { "name": "GSAP", "strength": "strong" },
       { "name": "React Router", "strength": "strong" },
       { "name": "TanStak", "strength": "low" },
       { "name": "Zod", "strength": "low" },
