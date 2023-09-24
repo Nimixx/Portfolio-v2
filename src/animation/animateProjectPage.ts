@@ -4,19 +4,21 @@ import { gsap } from 'gsap'
 const tl = gsap.timeline()
 
 // Add animations to the timeline (your existing animations)
-tl.to('.last_post', {
-  translateY: '0%',
+tl.to('.page_project', {
+  translateY: 0,
   opacity: 1,
-  duration: 1,
+  duration: 0.5,
   delay: 0.5,
   stagger: 0.3,
   ease: 'Power4.easeIn'
 }).to(
-  ['.post_title', '.post_date'],
+  '.project_skills',
   {
+    translateY: 0,
     opacity: 1,
     duration: 1,
-    ease: 'Power0.easeNone'
+    stagger: 0.3,
+    ease: 'Power4.easeIn'
   },
-  '+=0.2'
+  '-=2'
 )

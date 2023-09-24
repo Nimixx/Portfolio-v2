@@ -5,20 +5,20 @@ import skillIconData from '@data/icons.json'
 ---
 
 <Sections>
-  <article class="mx-auto flex h-[15rem] w-full flex-col items-center justify-center xl:w-2/4 overflow-hidden">
+  <article
+    class="mx-auto flex h-[15rem] w-full flex-col items-center justify-center overflow-hidden xl:w-2/4"
+  >
     <h2 class="text-center text-2xl font-bold uppercase text-accent_1">
       Nauč se každý den něco nového
     </h2>
-    <div class="wrapper h-40">
+    <div class="wrapper h-40 icon_container opacity-0">
       <div class="boxes relative left-[50px]">
         <div class="icon-container flex">
-          {skillIconData.map((iconName) => <Sprite name={iconName} class="w-12 text-4xl box" />)}
+          {skillIconData.map((iconName) => <Sprite name={iconName} class="box w-12 text-4xl" />)}
         </div>
       </div>
     </div>
   </article>
 </Sections>
-
-
 
 <script src="../../../animation/animateSkill.ts"></script>

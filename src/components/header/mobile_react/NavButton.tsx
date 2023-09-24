@@ -1,13 +1,14 @@
 type ButtonProps = {
   isMenuOpen: boolean
   handleOpen: () => void
+  buttonClass?: string
 }
 
-export default function NavButton({ isMenuOpen, handleOpen }: ButtonProps) {
+export default function NavButton({ isMenuOpen, handleOpen, buttonClass }: ButtonProps) {
   return (
     <button
       onClick={handleOpen}
-      className="block rounded border border-primary_light bg-primary_light/20 transition-colors duration-300 animate-in fade-in hover:bg-primary_light/40 md:hidden"
+      className={`block rounded border border-primary_light bg-primary_light/20 transition-colors duration-300 animate-in fade-in hover:bg-primary_light/40 md:hidden ${buttonClass}`}
     >
       {isMenuOpen ? (
         <svg

@@ -16,3 +16,10 @@ gsap.to('.box', {
   },
   repeat: -1
 })
+
+gsap.to('.icon_container', {
+  opacity: 1,
+  duration: 1,
+  delay: 2,
+  ease: "Power0.easeNone",
+})

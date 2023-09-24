@@ -33,14 +33,12 @@ const { prev, next } = page.url
 
 <AppPage title={`${SITE_TITLE} - Projekty & Aplikace`}>
   <Content class="py-10">
-    <ul
-      class="grid w-full grid-cols-1 gap-6 fadeIn md:grid-cols-2 lg:grid-cols-3"
-    >
+    <ul class="fadeIn grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
         page.data.map((project: projectProps) => (
-          <li class="w-full rounded-2xl border border-primary_light p-4 transition-colors duration-200 hover:bg-primary_light/20">
+          <li class="page_project w-full translate-y-10 rounded-2xl border border-primary_light p-4 opacity-0 shadow-md shadow-primary_dark transition-colors duration-200 hover:bg-primary_light/20">
             <a href={`/project/${project.slug}/`} class="block">
-              <div class="h-52 w-full">
+              <div class="h-52 w-full overflow-hidden rounded-xl  shadow-primary_dark outline outline-4 outline-primary_light">
                 <Image
                   format="avif"
                   quality="mid"
@@ -48,15 +46,21 @@ const { prev, next } = page.url
                   height={720}
                   src={project.data.heroImage}
                   alt=""
-                  class="mb-2 h-full w-full rounded-2xl object-cover"
+                  class="project_img mb-2 h-full w-full object-cover "
                 />
               </div>
               <article class="mt-5">
                 <p class="text-center text-gray-400">
                   <FormattedDate date={new Date(project.data.pubDate)} />
                 </p>
-                <h4 class="text-center text-xl">{project.data.title}</h4>
-                <TagIcon tags={project.data.tags} iconClass="w-6 h-6" class="pt-4" />
+                <h4 class="text-center text-xl font-bold text-accent_1">{project.data.title}</h4>
+                <div class="overflow-hidden">
+                  <TagIcon
+                    tags={project.data.tags}
+                    iconClass="w-6 h-6"
+                    class="project_skills translate-y-full pt-4 opacity-0"
+                  />
+                </div>
               </article>
               <Spacer class="my-4" />
               <p class="text-gray-300">{truncateDescription(project.data.description, 200)}</p>
@@ -72,7 +76,7 @@ const { prev, next } = page.url
         prev && (
           <HyperLink
             href={prev}
-            class="mx-2 rounded-xl border border-primary_light px-4 py-2 transition-colors duration-300 hover:bg-primary_light/20"
+            class="mx-2 rounded-md border border-primary_light px-4 py-2 transition-colors duration-300 hover:bg-primary_light/20"
             data-action="next"
           >
             Předchozí stránka
@@ -83,7 +87,7 @@ const { prev, next } = page.url
         next && (
           <HyperLink
             href={next}
-            class="mx-2 rounded-xl border border-primary_light px-4 py-2 transition-colors duration-300 hover:bg-primary_light/20"
+            class="mx-2 rounded-md border border-primary_light px-4 py-2 transition-colors duration-300 hover:bg-primary_light/20"
             data-action="next"
           >
             Další stránka
@@ -93,3 +97,5 @@ const { prev, next } = page.url
     </section>
   </Content>
 </AppPage>
+
+<script src="../../animation/animateProjectPage.ts"></script>

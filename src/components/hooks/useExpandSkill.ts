@@ -5,7 +5,7 @@ interface ExpandState {
   handleExpand: () => void
 }
 
-export function useExpandState(initialState: boolean = false): ExpandState {
+export function useExpandSkill(initialState: boolean = false): ExpandState {
   const [isExpand, setIsExpand] = useState<boolean>(initialState)
 
   const handleExpand = (): void => {

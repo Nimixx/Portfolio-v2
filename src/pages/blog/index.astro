@@ -7,18 +7,17 @@ import { SITE_TITLE } from '@src/consts'
 import Spacer from '@src/components/ui/Spacer.astro'
 import { truncateDescription } from '@components/hooks/truncateDescription'
 import { posts } from '@components/hooks/fetchPosts.ts'
+import TagIcon from '@src/components/ui/TagIcon.astro'
 ---
 
 <AppPage title={`${SITE_TITLE} - Návody, Články, Tvorba webu`}>
   <Content class="py-10">
-    <ul
-      class="grid w-full grid-cols-1 gap-6 fadeIn md:grid-cols-2 lg:grid-cols-3"
-    >
+    <ul class="fadeIn grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
         posts.map((post) => (
-          <li class="w-full rounded-2xl border border-primary_light p-4 duration-300 hover:bg-primary_light/20">
+          <li class="post_project w-full translate-y-10 rounded-2xl border border-primary_light p-4 duration-300 hover:bg-primary_light/20 opacity-0">
             <a href={`/blog/${post.slug}/`} class="block">
-              <div class="h-52 w-full">
+              <div class="h-52 w-full overflow-hidden rounded-xl  shadow-primary_dark outline outline-4 outline-primary_light">
                 <Image
                   format="avif"
                   quality="low"
@@ -34,6 +33,13 @@ import { posts } from '@components/hooks/fetchPosts.ts'
                   <FormattedDate date={post.data.pubDate} />
                 </p>
                 <h4 class="text-center text-xl">{post.data.title}</h4>
+                <div class="overflow-hidden">
+                  <TagIcon
+                    tags={post.data.tags}
+                    iconClass="w-6 h-6"
+                    class="post_skills translate-y-full pt-4 opacity-0"
+                  />
+                </div>
               </article>
               <Spacer class="my-4" />
               <p class="text-gray-300">{truncateDescription(post.data.description, 200)}</p>
@@ -44,3 +50,5 @@ import { posts } from '@components/hooks/fetchPosts.ts'
     </ul>
   </Content>
 </AppPage>
+
+<script src="../../animation/animatePostPage.ts"></script>

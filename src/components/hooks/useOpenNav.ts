@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks'
 import useNoScroll from './useNoScroll.ts'
+import { gsap } from 'gsap'
 
 export const useOpenNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

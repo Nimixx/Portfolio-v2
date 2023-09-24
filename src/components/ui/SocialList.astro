@@ -13,7 +13,7 @@ import HyperLink from './HyperLink.astro'
 <ul class:list={twMerge('gap-4 text-accent_1', listClass)}>
   {
     SOCIAL_LINKS.map((link) => (
-      <li class="rounded-md outline outline-2 p-1.5 outline-transparent transition-all duration-300 hover:bg-primary_light hover:outline-accent_3/30 group">
+      <li class="group cursor-pointer rounded-md p-1.5 outline outline-2 outline-transparent transition-all duration-300 hover:bg-primary_light hover:outline-accent_3/30">
         <HyperLink href={link.href} target="_blank">
           <Sprite
             name={link.icon}
@@ -24,7 +24,9 @@ import HyperLink from './HyperLink.astro'
     ))
   }
   <li class={twMerge('border-r border-accent_1/20', settingClass)}></li>
-  <li class="rounded-md outline outline-2 p-1.5 outline-transparent transition-all duration-300 hover:bg-primary_light hover:outline-accent_3/30 group">
+  <li
+    class="group cursor-pointer rounded-md p-1.5 outline outline-2 outline-transparent transition-all duration-300 hover:bg-primary_light hover:outline-accent_3/30"
+  >
     <HyperLink href="/settings">
       <Sprite
         name="mdi:cog-outline"
