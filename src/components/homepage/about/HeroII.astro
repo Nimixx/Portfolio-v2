@@ -1,0 +1,37 @@
+---
+import Sections from '@src/layouts/Sections.astro'
+import PrimaryTitle from '@src/components/ui/PrimaryTitle.astro'
+import PrimaryText from '@src/components/ui/PrimaryText.astro'
+import Hyperlink from '../../ui/HyperLink.astro'
+---
+
+<Sections class="min-h-[40rem]">
+  <section class="relative flex items-center justify-between gap-10">
+    <div class="flex flex-col space-y-6">
+      <PrimaryTitle class="text-8xl text-accent_3">Jen krátce</PrimaryTitle>
+      <PrimaryText class="max-w-xl">
+        Jsem človíček co se rád pohybuje na internetu a sleduje moderní trendy. Jsem velmi rád když
+        pokud se mám co učit a na čem pracovat, nerad jen tak sedím na židly a koukám do ničeho.
+        Koukni na moje <Hyperlink href="/project" class='class="font-semibold text-accent_2'>
+          projekty
+        </Hyperlink> nebo na <Hyperlink href="/blog" class='class="font-semibold text-accent_2'>
+          blog
+        </Hyperlink>. Pokud se chceš o mně dozvědět víc, tak se podívej do sekce <Hyperlink
+          class="font-semibold text-accent_2"
+          href="/bio"
+        >
+          moje bio
+        </Hyperlink>.
+      </PrimaryText>
+    </div>
+    <section class="relative">
+      <img src="./base_layer.svg" alt="hero illustration of website" class="w-[40rem] base_layer opacity-0" />
+      <img src="./upper_rectangle.svg" alt="" class="absolute -top-96 opacity-0 rectangle_1">
+      <img src="./right_rectangle.svg" alt="" class="absolute top-0 -right-96 rectangle_2 opacity-0">
+      <img src="./circle.svg" alt="" class="absolute top-64 opacity-0 circle rotate-180">
+    </section>
+  </section>
+</Sections>
+
+
+<script src="../../../animation/animateHero.ts"></script>
