@@ -14,38 +14,38 @@ import TagIcon from '@src/components/ui/TagIcon.astro'
 type Props = CollectionEntry<'project'>['data']
 
 const { title, description, heroImage, pubDate, imageCredit, imageAuthor, github, deploy, tags } =
-	Astro.props
+  Astro.props
 
 const conditionalGithub = !!github
 const conditionalDeploy = !!deploy
 ---
 
 <AppPage title={`${SITE_TITLE} - ${title}`} description={description}>
-	<ContentPost>
-		<div class="relative mb-10 h-96 w-full overflow-hidden duration-1000 animate-in fade-in">
-			<Image
-				class="h-full w-full rounded-bl-xl rounded-br-xl object-cover"
-				format="avif"
-				quality="mid"
-				width={1920}
-				height={1080}
-				src={heroImage}
-				alt={title}
-			/>
-			<ImageAutor href={imageCredit} label={imageAuthor} />
-		</div>
-		<AboutProject
-			title={title}
-			pubDate={pubDate}
-			github={github}
-			publicGithub={conditionalGithub}
-			deploy={deploy}
-			deployLive={conditionalDeploy}
-		/>
-		<TagIcon tags={tags} class="py-4" />
-		<Spacer />
-		<article class="post">
-			<slot />
-		</article>
-	</ContentPost>
+  <ContentPost>
+    <section class="relative mb-10 h-96 w-full overflow-hidden duration-1000 animate-in fade-in">
+      <Image
+        class="h-full w-full rounded-bl-xl rounded-br-xl object-cover"
+        format="avif"
+        quality="mid"
+        width={1920}
+        height={1080}
+        src={heroImage}
+        alt={title}
+      />
+      {imageCredit && <ImageAutor href={imageCredit} label={imageAuthor} />}
+    </section>
+    <AboutProject
+      title={title}
+      pubDate={pubDate}
+      github={github}
+      publicGithub={conditionalGithub}
+      deploy={deploy}
+      deployLive={conditionalDeploy}
+    />
+    <TagIcon tags={tags} class="py-4" />
+    <Spacer />
+    <article class="post">
+      <slot />
+    </article>
+  </ContentPost>
 </AppPage>

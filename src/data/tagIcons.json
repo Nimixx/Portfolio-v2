@@ -4,6 +4,7 @@
 	"sass": "vscode-icons:file-type-sass",
 	"astro": "vscode-icons:file-type-astro",
 	"react": "vscode-icons:file-type-reactjs",
+	"preact": "vscode-icons:file-type-preact",
 	"next": "simple-icons:next-dot-js",
 	"vue": "simple-icons:vue-dot-js",
 	"svelte": "simple-icons:svelte",

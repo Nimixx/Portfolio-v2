@@ -38,17 +38,17 @@ const { prev, next } = page.url
         page.data.map((project: projectProps) => (
           <li class="page_project w-full translate-y-10 rounded-2xl border border-primary_light p-4 opacity-0 shadow-md shadow-primary_dark transition-colors duration-200 hover:bg-primary_light/20">
             <a href={`/project/${project.slug}/`} class="block">
-              <div class="h-52 w-full overflow-hidden rounded-xl  shadow-primary_dark outline outline-4 outline-primary_light">
-                <Image
-                  format="avif"
-                  quality="mid"
-                  width={1280}
-                  height={720}
-                  src={project.data.heroImage}
-                  alt=""
-                  class="project_img mb-2 h-full w-full object-cover "
-                />
-              </div>
+              <section class="h-52 w-full overflow-hidden rounded-xl  shadow-primary_dark mesh_bg bg-cover bg-no-repeat">
+                  <Image
+                    format="avif"
+                    quality="mid"
+                    width={1280}
+                    height={720}
+                    src={project.data.heroImage}
+                    alt=""
+                    class="project_img mb-2 h-full w-full object-cover "
+                  />
+              </section>
               <article class="mt-5">
                 <p class="text-center text-gray-400">
                   <FormattedDate date={new Date(project.data.pubDate)} />

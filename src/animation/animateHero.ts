@@ -29,3 +29,4 @@ tl.add(animateElement('.base_layer', {}), 0.5)
 tl.add(animateElement('.rectangle_1', { top: '0' }), '-=1')
 tl.add(animateElement('.rectangle_2', { right: '0' }), '-=1')
 tl.add(animateElement('.circle', { top: '0', rotate: '0' }), '-=1')
+
