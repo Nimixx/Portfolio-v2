@@ -6,7 +6,7 @@ import HyperLink from '../../ui/HyperLink.astro'
 ---
 
 <Sections class="min-h-[40rem]">
-  <section class="relative flex items-center justify-between gap-10">
+  <section class="relative flex flex-col xl:flex-row items-center justify-between gap-10">
     <article class="flex flex-col items-start space-y-6">
       <PrimaryTitle
         class="bg-gradient-to-tr from-violet-500 to-orange-300 bg-clip-text text-8xl text-transparent"
@@ -19,22 +19,12 @@ import HyperLink from '../../ui/HyperLink.astro'
         >, <strong class="text-sky-400">React</strong>. Zároveň ale sleduju moderní trendy a rád se
         učím. Zájímám se také o UI/UX a baví mě moderní design .
       </PrimaryText>
-      <section class="flex items-center gap-4 max-w-lg">
-        <HyperLink
-          href="/bio"
-          class="bio_link flex h-32 w-32 items-center justify-center overflow-hidden whitespace-nowrap rounded-full bg-primary_light/60 text-6xl font-bold uppercase outline outline-4 outline-accent_3/40"
-        >
-          bio
-        </HyperLink>
-        <HyperLink
-        href="/bio"
-        class="bio_link flex h-32 w-96 items-center justify-center overflow-hidden whitespace-nowrap rounded-full bg-primary_light/60 text-6xl font-bold uppercase outline outline-4 outline-accent_3/40"
-      >
-        work
+      <HyperLink href="/bio" class="relative flex items-center bio_link">
+        <div class="absolute mr-2 h-16 w-16 rounded-full bg-accent_3/20 ball"></div>
+        <p class="relative px-6 py-4 text-4xl font-bold uppercase">kompletní bio</p>
       </HyperLink>
-      </section>
     </article>
-    <section class="relative">
+    <section class="hidden xl:relative xl:block">
       <img
         src="./base_layer.svg"
         alt="hero illustration of website"
