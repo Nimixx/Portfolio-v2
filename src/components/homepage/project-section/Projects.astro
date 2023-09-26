@@ -1,7 +1,6 @@
 ---
 // Import Components
 import { project } from '@components/hooks/fetchProject'
-import FormattedDate from '@src/components/ui/FormattedDate.astro'
 // Utils
 import { Image } from 'astro:assets'
 // Constants
@@ -9,12 +8,12 @@ const slicedPosts = project.slice(0, 6)
 ---
 
 <ul
-  class="grid w-full grid-cols-1 overflow-hidden rounded-lg outline outline-8 outline-primary_light shadow-md shadow-primary_dark md:grid-cols-2 lg:grid-cols-3"
+  class="grid w-full grid-cols-1 overflow-hidden rounded-lg md:grid-cols-2 lg:grid-cols-3"
 >
   {
     slicedPosts.map((project) => (
       <li class="bg-primary_light/40transition-all h-full w-full duration-500 hover:bg-primary_light/60 last_projects translate-y-full opacity-0">
-        <a href={`/project/${project.slug}/`} class="flex flex-col gap-4 project_link">
+        <a href={`/project/${project.slug}/`} class="flex flex-col gap-4 project_link group">
           <section class="relative h-52 w-full overflow-hidden group">
             <Image
               format="avif"
@@ -23,16 +22,8 @@ const slicedPosts = project.slice(0, 6)
               height={720}
               src={project.data.heroImage}
               alt=""
-              class="h-full w-full object-cover"
+              class="h-full w-full object-cover group-hover:scale-125 group-hover:rotate-3 transition-transform duration-300"
             />
-            <article
-              class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-2 bg-primary_dark/60 group-hover:bg-primary_dark/20 transition-all duration-500"
-            >
-              <h4 class="text-center text-4xl font-bold project_title opacity-0">{project.data.title}</h4>
-              <p class="text-secondary text-center text-accent_1 project_date opacity-0">
-                <FormattedDate date={project.data.pubDate} />
-              </p>
-            </article>
           </section>
         </a>
       </li>

@@ -9,8 +9,8 @@ import Sections from '@src/layouts/Sections.astro'
 import { POST_TEXT } from '@src/consts'
 ---
 
-<Sections>
-  <PrimaryTitle>Příspěvky</PrimaryTitle>
-  <PrimaryText>{POST_TEXT}</PrimaryText>
+<Sections class='min-h-[20rem]'>
+  <PrimaryTitle class=" uppercase text-6xl font-bold bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-green-200 via-green-300 to-blue-500 text-transparent bg-clip-text">Blog</PrimaryTitle>
+  <PrimaryText class="max-w-4xl">{POST_TEXT}</PrimaryText>
   <Posts />
 </Sections>

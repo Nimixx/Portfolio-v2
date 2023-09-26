@@ -11,12 +11,4 @@ tl.to('.last_projects', {
   delay: 0.5,
   stagger: 0.3,
   ease: 'Power2.easeIn'
-}).to(
-  ['.project_title', '.project_date'],
-  {
-    opacity: 1,
-    duration: 1,
-    ease: 'Power0.easeNone'
-  },
-  '+=0.2'
-)
+})

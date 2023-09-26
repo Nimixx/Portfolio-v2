@@ -11,7 +11,7 @@ if (isDesktop) {
   })
 
   gsap.to('.box', {
-    duration: 144,
+    duration: 175,
     ease: 'Power0.easeNone',
     x: `-=${value}`,
     modifiers: {

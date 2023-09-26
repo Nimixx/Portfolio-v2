@@ -5,11 +5,11 @@ import PrimaryText from '@src/components/ui/PrimaryText.astro'
 import HyperLink from '../../ui/HyperLink.astro'
 ---
 
-<Sections class="min-h-[40rem]">
+<Sections class="min-h-[35rem] xl:min-h-[40rem]">
   <section class="relative flex flex-col xl:flex-row items-center justify-between gap-10">
     <article class="flex flex-col items-start space-y-6">
       <PrimaryTitle
-        class="bg-gradient-to-tr from-violet-500 to-orange-300 bg-clip-text text-8xl text-transparent"
+        class="bg-gradient-to-tr from-violet-500 to-orange-300 bg-clip-text text-8xl text-transparent uppercase font-extrabold"
       >
         Každý den,
       </PrimaryTitle>
@@ -20,7 +20,7 @@ import HyperLink from '../../ui/HyperLink.astro'
         učím. Zájímám se také o UI/UX a baví mě moderní design .
       </PrimaryText>
       <HyperLink href="/bio" class="relative flex items-center bio_link">
-        <div class="absolute mr-2 h-16 w-16 rounded-full bg-accent_3/20 ball"></div>
+        <div class="absolute mr-2 h-16 w-16 rounded-full bg-indigo-500 ball"></div>
         <p class="relative px-6 py-4 text-4xl font-bold uppercase">kompletní bio</p>
       </HyperLink>
     </article>
