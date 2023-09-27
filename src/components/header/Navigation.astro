@@ -20,7 +20,7 @@ const { pathname } = Astro.url
             (item.path === BLOG && pathname.startsWith(`${BLOG}/`)) ||
             (item.path === PROJECT && pathname.startsWith(`${PROJECT}/`))
               ? 'text-accent_3 underline underline-offset-8'
-              : 'text-white'
+              : 'text-accent_1'
           }
         >
           <HyperLink class="transition-colors duration-300 hover:text-accent_3" href={item.path}>

@@ -3,40 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-primary: 16 10 33;
-    --color-primary-light: 50 41 75;
-    --color-primary-dark: 16 10 33;
-    --color-primary-text: 232 231 235;
-    --color-secondary-text: 141 136 155;
-    --color-accent: 141 136 155;
-    --color-accent2: 229 219 225;
-    --color-accent3: 29 153 247;
-    --color-success: 99 230 190;
-  }
-  :root[data-theme='fialová'] {
-    --color-primary: 16 10 33;
-    --color-primary-light: 50 41 75;
-    --color-primary-dark: 16 10 33;
-    --color-primary-text: 232 231 235;
-    --color-secondary-text: 141 136 155;
-    --color-accent: 145 118 153;
-    --color-accent2: 183 102 206;
-    --color-accent3: 196 119 218;
-    --color-success: 99 230 190;
-  }
-  :root[data-theme='modrá'] {
-    --color-primary: 13 16 41;
-    --color-primary-light: 23 28 65;
-    --color-primary-dark: 8 11 29;
-    --color-primary-text: 232 231 235;
-    --color-secondary-text: 136 141 179;
-    --color-accent: 136 141 179;
-    --color-accent2: 119 131 228;
-    --color-accent3: 176 190 255;
-    --color-success: 99 230 190;
-  }
-  :root[data-theme='šedivá'] {
+  :root[data-theme='dark'] {
     --color-primary: 27 27 34;
     --color-primary-light: 49 49 63;
     --color-primary-dark: 20 20 24;
@@ -47,14 +14,21 @@
     --color-accent3:  184 184 212 ;
     --color-success: 99 230 190;
   }
+
+  :root[data-theme='light'] {
+    --color-primary: 241 241 241;
+    --color-primary-light: 255 255 255;
+    --color-primary-dark: 231 231 231;
+    --color-primary-text: 27 27 34;
+    --color-secondary-text: 49 49 63;
+    --color-accent: 155 155 155;
+    --color-accent2: 135 135 135;
+    --color-accent3:  105 105 105 ;
+    --color-success: 99 230 190;
+  }
 }
 
-.color {
-    color: rgb(27, 27, 34);
-    color: rgb(49, 49, 63);
-    color: rgb(183, 102, 206);
-    color: rgb(135, 135, 153);
-    color: rgb(118, 118, 134);
-    color: rgb(184, 184, 212);
-    color: rgb(123, 123, 138);
+
+.btn {
+  color: rgb(185, 185, 185);
 }

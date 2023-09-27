@@ -3,6 +3,7 @@
 import SiteName from './SiteName.astro'
 import Navigation from './Navigation.astro'
 import SocialList from '@components/ui/SocialList.astro'
+import ThemeSwitch from './ThemeSwitch';
 ---
 
 <script src="../hooks/useHeaderScroll.ts"></script>
@@ -15,6 +16,7 @@ import SocialList from '@components/ui/SocialList.astro'
     <Navigation />
     <section class="hidden items-center gap-6 md:flex">
       <SocialList listClass="hidden md:flex" />
+      <ThemeSwitch client:load />
     </section>
   </section>
 </header>
