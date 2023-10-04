@@ -25,9 +25,6 @@ if (isDesktop) {
 
   // Animation 1
   tl.add(animate('.base_layer', {}), 0.5);
-  tl.add(animate('.rectangle_1', { top: '0' }), '-=1');
-  tl.add(animate('.rectangle_2', { right: '0' }), '-=1');
-  tl.add(animate('.circle', { top: '0', rotate: '0' }), '-=1');
 
   // Ball hover
   const ball = document.querySelector('.ball');

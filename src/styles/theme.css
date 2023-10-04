@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root[data-theme='dark'] {
+  :root {
     --color-primary: 27 27 34;
     --color-primary-light: 49 49 63;
     --color-primary-dark: 20 20 24;
@@ -13,22 +13,12 @@
     --color-accent2: 123 123 138 ;
     --color-accent3:  184 184 212 ;
     --color-success: 99 230 190;
+    --color-hero-ball: 238 57 87;
   }
 
-  :root[data-theme='light'] {
-    --color-primary: 241 241 241;
-    --color-primary-light: 255 255 255;
-    --color-primary-dark: 231 231 231;
-    --color-primary-text: 27 27 34;
-    --color-secondary-text: 49 49 63;
-    --color-accent: 155 155 155;
-    --color-accent2: 135 135 135;
-    --color-accent3:  105 105 105 ;
-    --color-success: 99 230 190;
-  }
 }
 
 
 .btn {
-  color: rgb(185, 185, 185);
+  color: rgb(238, 57, 87)
 }

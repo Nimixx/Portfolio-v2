@@ -5,38 +5,34 @@ import PrimaryText from '@src/components/ui/PrimaryText.astro'
 import HyperLink from '../../ui/HyperLink.astro'
 ---
 
-<Sections class="min-h-[35rem] xl:min-h-[40rem]">
-  <section class="relative flex flex-col xl:flex-row items-center justify-between gap-10">
+<Sections class="min-h-[35rem] xl:min-h-[45rem]">
+  <section class="relative flex flex-col xl:items-center justify-between gap-10 lg:flex-row">
     <article class="flex flex-col items-start space-y-6">
-      <PrimaryTitle
-        class="bg-gradient-to-tr from-violet-500 to-orange-300 bg-clip-text text-8xl text-transparent uppercase font-extrabold"
-      >
-        Každý den,
-      </PrimaryTitle>
+      <section class="relative w-full">
+        <PrimaryTitle
+          class="xl:max-w-lg text-6xl md:text-8xl font-extrabold uppercase"
+        >
+          FrontEnd<br />developer
+        </PrimaryTitle>
+        <div class="w-64 h-24 lg:h-40 bg-pattern bg-no-repeat bg-cover -z-10 opacity-30 absolute -top-5 -left-2 xl:-left-10"></div>
+      </section>
       <PrimaryText class="max-w-lg pb-4">
-        vytvářím webové stránky & aplikace od základu. Nejraději pracuji s frameworky jako je <strong
+        Vytvářím webové stránky & aplikace od základu. Nejraději pracuji s frameworky jako je <strong
           class="text-orange-400">Astro</strong
         >, <strong class="text-sky-400">React</strong>. Zároveň ale sleduju moderní trendy a rád se
         učím. Zájímám se také o UI/UX a baví mě moderní design .
       </PrimaryText>
-      <HyperLink href="/bio" class="relative flex items-center bio_link">
-        <div class="absolute mr-2 h-16 w-16 rounded-full bg-indigo-500 ball"></div>
-        <p class="relative px-6 py-4 text-4xl font-bold uppercase">kompletní bio</p>
+      <HyperLink href="/bio" class="bio_link relative flex items-center">
+        <div class="bg-hero_ball ball absolute mr-2 h-16 w-16 rounded-full"></div>
+        <p class="relative px-6 py-4 text-4xl font-bold uppercase">Kdo vlastně jsem?</p>
       </HyperLink>
     </article>
-    <section class="hidden xl:relative xl:block">
+    <section class="hidden lg:relative lg:block">
       <img
-        src="./base_layer.svg"
+        src="./hero.svg"
         alt="hero illustration of website"
         class="base_layer w-[40rem] opacity-0"
       />
-      <img src="./upper_rectangle.svg" alt="" class="rectangle_1 absolute -top-96 opacity-0" />
-      <img
-        src="./right_rectangle.svg"
-        alt=""
-        class="rectangle_2 absolute -right-96 top-0 opacity-0"
-      />
-      <img src="./circle.svg" alt="" class="circle absolute top-64 rotate-180 opacity-0" />
     </section>
   </section>
 </Sections>
